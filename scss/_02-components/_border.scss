@@ -1,0 +1,59 @@
+.border--green {
+    border-color: map-get($green, main) !important;
+}
+
+.border--pink {
+    border-color: map-get($pink, main) !important;
+}
+
+.border--pink-faded {
+    border-color: map-get($pink, faded) !important;
+}
+
+.border--gold {
+    border-color: map-get($gold, main) !important;
+}
+
+.border--black {
+    border-color: $black !important;
+}
+
+.border--white {
+    border-color: $white !important;
+}
+
+.border--1 {
+    border: 1px solid;
+}
+
+.border--2 {
+    border: 2px solid;
+}
+
+.border--3 {
+    border: 3px solid;
+}
+
+.border--right-1 {
+    border-right: 1px solid;
+}
+
+.border--right-2 {
+    border-right: 2px solid;
+}
+
+.border--right-3 {
+    border-right: 3px solid;
+}
+
+.border--left-1 {
+    border-left: 1px solid;
+}
+
+.border--left-2 {
+    border-left: 2px solid;
+}
+
+.border--left-3 {
+    border-left: 3px solid;
+}

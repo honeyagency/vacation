@@ -1,0 +1,147 @@
+svg {
+    // width: 80vw;
+    display: block;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+g {
+    path {
+        stroke: #fff;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: -1000;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: $base-cubic;
+        fill: transparent;
+        animation-name: dash;
+    }
+
+    // &:nth-of-type(1) {
+    //     path {
+    //         animation-duration: 1.32s;
+
+    //     }
+    // }
+
+    &:nth-of-type(2) {
+        path {
+            animation-duration: 1.5s;
+
+            // &:nth-of-type(2) {
+            //     animation-duration: 1.46s;
+            // }
+       
+        }
+    }
+
+    &:nth-of-type(3) {
+        path {
+            animation-duration: 1.50s;
+        }
+    }
+
+    &:nth-of-type(4) {
+        path {
+            animation-duration: 1.68s;
+        }
+    }
+
+    &:nth-of-type(5) {
+        path {
+            animation-duration: 1.80s;
+        }
+    }
+
+    &:nth-of-type(6) {
+        path {
+            animation-duration: 1.92s;
+        }
+    }
+
+    &:nth-of-type(7) {
+        path {
+            animation-duration: 2.04s;
+        }
+    }
+
+    &:nth-of-type(8) {
+        path {
+            animation-duration: 2.28s;
+
+            &:nth-of-type(2) {
+                animation-duration: 2.16s;
+            }
+        }
+    }
+
+    &:nth-of-type(9) {
+        path {
+            animation-duration: 2.40s;
+        }
+    }
+
+    &:nth-of-type(10) {
+        path {
+            animation-duration: 2.5s;
+        }
+    }
+}
+
+#santa, #ana {
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: $base-cubic;
+    opacity: 0;
+}
+
+#santa {
+    animation-name: letters;
+}
+
+#ana {
+    animation-name: letters-taller;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: -1000;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes letters {
+    0% {
+        opacity: 0;
+        transform: translate(1.91px, 20px);
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(1.91px, 1.62px);
+    }
+}
+
+@keyframes letters-taller {
+    0% {
+        opacity: 0;
+        transform: translate(1.91px, 45px);
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(1.91px, 1.62px);
+    }
+}

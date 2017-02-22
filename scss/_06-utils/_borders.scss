@@ -1,0 +1,57 @@
+
+
+
+
+
+$section--border: false !default;
+$p--border: false !default;
+$div--border: false !default;
+$span--border: false !default;
+$ul--border: false !default;
+
+@mixin borders($element, $color, $px) {
+    main {
+        #{$element} {
+            border: #{$px}px solid $color !important;
+            top: 0;
+
+            &:before {
+                position: absolute;
+                content: " (" attr(class) ")";
+                margin-top: -26px;
+                background-color: $color;
+                color: white;
+                padding: 0 1em;
+                z-index: 1;
+                font-size: 14px;
+                text-transform: none;
+            }
+
+            &:hover {
+                &:before {
+                    z-index: 4;
+                }
+            }
+        }
+    }
+}
+
+@if $section--border == true or $section--border == yes {
+    @include borders(section, red, 4);
+}
+
+@if $div--border == true or $div--border == yes {
+    @include borders(div, blue, 2);
+}
+
+@if $p--border == true or $p--border == yes {
+    @include borders(p, green, 1);
+}
+
+@if $span--border == true or $span--border == yes {
+    @include borders(span, orange, 1);
+}
+
+@if $ul--border == true or $ul--border == yes {
+    @include borders(ul, black, 1);
+}

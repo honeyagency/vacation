@@ -1,0 +1,9 @@
+<section class="bg--gold color--white spacing--gutter spacing--vert-3 flex flex--wrap justify--center">
+	<div class="grid--sm-third font--larger">
+	{% if home.email.title %}<div class="color--pink-faded font--bold letter--1 text--uppercase">{{home.email.title}}</div>{% endif %}
+	{% if home.email.description %}<div>{{home.email.description}}</div>{% endif %}
+	</div>
+	<div class="grid--sm-third">
+		{% include 'components/blocks/block--email-signup.twig' %}
+	</div>
+</section>

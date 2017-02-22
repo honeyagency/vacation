@@ -1,0 +1,27 @@
+.bg--green {
+    background-color: map-get($green, main);
+}
+
+.bg--pink {
+    background-color: map-get($pink, main);
+}
+
+.bg--pink-faded {
+    background-color: map-get($pink, faded);
+}
+
+.bg--gold {
+    background-color: map-get($gold, main);
+}
+
+.bg--black {
+    background-color: $black;
+}
+
+.bg--white {
+    background-color: $white;
+}
+
+.bg--gradient-pink-gold {
+    background: linear-gradient(to bottom right, map-get($pink, main) 0%, map-get($pink, main) 50%, map-get($gold, main) 50%, map-get($gold, main) 100%);
+}

@@ -1,10 +1,12 @@
 $link-color: #fac4c0;
 
-$default-font: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !default;
+$default-font: "sofia-pro",sans-serif;
 
-$base-serif-font:$default-font;
-$base-sans-font:$default-font;
-$heading-font-family:$default-font;
+$base-serif-font: $default-font;
+$base-sans-font: $default-font;
+
+$heading-font-family: "ronnia",sans-serif;
+
 
 $heading-font-weight: 600;
 
@@ -24,6 +26,9 @@ $base-line-height: 1.6;
 $base-border-radius: 8px;
 $gr:1.610833;
 
+$base-cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
+
+$wrapper-width: 1400px;
 //
 // Media Queries & Breakpoints
 // 

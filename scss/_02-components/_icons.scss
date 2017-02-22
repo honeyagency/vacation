@@ -1,5 +1,13 @@
-.icon-logo {
-    svg {
-        height: 70px;
+header {
+    .icon-logo {
+        svg {
+            height: 100px;
+        }
     }
+}
+
+.icon-nav {
+    position: relative;
+    z-index: 99999;
+    width: 50px;
 }

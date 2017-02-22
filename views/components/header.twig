@@ -1,6 +1,9 @@
-<header class="header flex flex--wrap align--items-center">
+<header class="header flex flex--wrap align--items-center justify--end spacing--gutter">
 	{% block header %}
-		<a class="hdr-logo-link" href="/" rel="home"><i class="icon-logo" data-grunticon-embed></i></a>
+		{% if post.slug != 'home' %}
+			<a class="hdr-logo-link" href="/" rel="home"><i class="icon-logo" data-grunticon-embed></i></a>
+		{% endif %}
+		<i class="icon-nav hidden--dsk" data-grunticon-embed></i>
 		{% include 'components/navigation.twig' %}
 	{% endblock %}
 </header>

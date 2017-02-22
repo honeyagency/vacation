@@ -37,8 +37,11 @@
 	padding-left:1em;
 
 	@include media($screen-md) {
-		padding-left:4.5em;
-		padding-right:4.5em;
+		padding-left:2em;
+		padding-right:2em;
 	}
 	
+}
+.margin--right-10{
+	margin-right:10px;
 }

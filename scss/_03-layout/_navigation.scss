@@ -1,1 +1,10 @@
-nav {}
+nav {
+    ul {
+        margin: 0;
+
+        li {
+            margin: 0;
+            display: inline-block;
+        }
+    }
+}
