@@ -24,16 +24,15 @@
       "name": "{{site.name}}",
       "image": "{{options.image}}",
       "servesCuisine": "American",
-      "phone": "{{options.phone}}",
+      "telephone": "{{options.phone}}",
       "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "{{options.address.city}}",
-            "addressRegion": "{{options.address.stae}}",
-            "postalCode": "{{options.address.zip}}",
-            "streetAddress": "{{options.address.street}}"
+        "@type": "PostalAddress",
+        "addressLocality": "{{options.address.city}}",
+        "addressRegion": "{{options.address.stae}}",
+        "postalCode": "{{options.address.zip}}",
+        "streetAddress": "{{options.address.street}}"
         },
     }
-
     </script>
     <link rel="pingback" href="{{site.pingback_url}}" />
     {{function('wp_head')}}
