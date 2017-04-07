@@ -1,2 +1,2 @@
 # vacation
-Website theme for Vacation 🌴🏝
+vacation site
