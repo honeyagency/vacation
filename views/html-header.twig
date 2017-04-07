@@ -21,10 +21,6 @@
     {
       "@context": "http://schema.org/",
       "@type": "Restaurant",
-      "name": "{{site.name}}",
-      "image": "{{options.image}}",
-      "servesCuisine": "American",
-      "telephone": "{{options.phone}}",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "{{options.address.city}}",
@@ -32,6 +28,10 @@
         "postalCode": "{{options.address.zip}}",
         "streetAddress": "{{options.address.street}}"
         },
+      "name": "{{site.name}}",
+      "image": "{{options.image}}",
+      "servesCuisine": "American",
+      "telephone": "{{options.phone}}",
     }
     </script>
     <link rel="pingback" href="{{site.pingback_url}}" />
