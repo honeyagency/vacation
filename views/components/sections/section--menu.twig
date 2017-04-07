@@ -4,7 +4,7 @@
 		<div class="block--menu-wrap bg--white spacing--dsk-vert-5 spacing--dsk-horiz-5 bg--texture">
 			<div class="gold-border flex flex--wrap justify--around" itemscope itemtype="http://schema.org/Menu">
 				{% if home.menu.food %}
-					<div class="grid--one grid--sm-two-fifths spacing--horiz-2 spacing--vert-2" itemscope itemprop="http://schema.org/MenuSection">
+					<div class="grid--one grid--sm-two-fifths spacing--horiz-2 spacing--vert-2"  itemprop="http://schema.org/MenuSection">
 						<h5 class="color--green" itemprop="name">Food</h5>
 						<br>
 						{% for item in home.menu.food %}
@@ -16,7 +16,7 @@
 					</div>
 				{% endif %}
 				{% if home.menu.cocktails %}
-					<div class="grid--one grid--sm-two-fifths spacing--horiz-2 spacing--vert-2" itemscope itemprop="http://schema.org/MenuSection">
+					<div class="grid--one grid--sm-two-fifths spacing--horiz-2 spacing--vert-2"  itemprop="http://schema.org/MenuSection">
 						<h5 class="color--green"  itemprop="name">Cocktails</h5>
 						<br>
 						{% for item in home.menu.cocktails %}
