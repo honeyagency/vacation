@@ -1,16 +1,14 @@
 {% if food %}
 	<section class="section--menu spacing--horiz-1 spacing--vert-1 spacing--dsk-horiz-5 spacing--dsk-vert-4 bg--gradient-pink-gold">
 		<div class="block--menu-wrap bg--white spacing--dsk-vert-5 spacing--dsk-horiz-5 bg--texture">
-			<div class="gold-border flex flex--wrap justify--around" itemscope itemtype="http://schema.org/Menu" itemprop="http://schema.org/hasMenuSection">
+			<div class="gold-border flex flex--wrap justify--around" >
 				{% for food in food %}
-					<div class="grid--one grid--sm-two-fifths spacing--horiz-2 spacing--vert-2" itemscope itemtype="http://schema.org/MenuSection">
-						<h5 class="color--green" itemprop="name">{{food.title}}</h5>
+					<div class="grid--one grid--sm-two-fifths spacing--horiz-2 spacing--vert-2" >
+						<h5 class="color--green">{{food.title}}</h5>
 						<br>
 						{% for item in food.menu %}
-							<div itemprop="hasMenuItem" itemscope type="http://schema.org/MenuItem">
-								<h4 itemprop="name">{{item.item}}</h4>
-								<p itemprop="description">{{item.description}}</p>
-							</div>
+							<h4>{{item.item}}</h4>
+							<p>{{item.description}}</p>
 						{% endfor %}
 					</div>
 				{% endfor %}
