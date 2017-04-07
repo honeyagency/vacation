@@ -32,7 +32,8 @@
       "image": "{{options.image}}",
       "servesCuisine": "American",
       "telephone": "{{options.phone_number}}",
-      "url": "{{site.url}}"
+      "url": "{{site.url}}",
+      {% include 'components/meta--menu.twig' %}
     }
     </script>
     <link rel="pingback" href="{{site.pingback_url}}" />

@@ -20,37 +20,9 @@ function prepareHomePageFields()
         'description' => get_field('field_58a785d29d020'),
     );
 
-    if (have_rows('field_58e8016eb545a')) {
-        $food = array();
-        while (have_rows('field_58e8016eb545a')) {
-            the_row();
-            $food[] = array(
-                'item'        => get_sub_field('field_58e801f2b545b'),
-                'description' => get_sub_field('field_58e801fcb545c'),
-            );
-        }
-    } else {
-        $food = null;
-    }
-    if (have_rows('field_58e8022caa428')) {
-        $cocktails = array();
-        while (have_rows('field_58e8022caa428')) {
-            the_row();
-            $cocktails[] = array(
-                'item'        => get_sub_field('field_58e8022daa429'),
-                'description' => get_sub_field('field_58e8022daa42a'),
-            );
-        }
-    } else {
-        $cocktails = null;
-    }
-    $menu = array(
-        'food'      => $food,
-        'cocktails' => $cocktails,
-    );
     $section = array(
         'email' => $email,
-        'menu'  => $menu,
+        'food'  => $menus,
     );
     return $section;
 }
@@ -75,4 +47,33 @@ function prepareOptionsPage()
         'phone_number' => get_field('field_58e80f2fae445', 'options'),
     );
     return $section;
+}
+function prepareRestaurantMenus()
+{
+
+    if (have_rows('field_58e8184539609', 'options')) {
+        $menus = array();
+        while (have_rows('field_58e8184539609', 'options')) {
+            the_row();
+            $menu = array();
+            if (have_rows('field_58e81865b4293', 'options')) {
+                while (have_rows('field_58e81865b4293', 'options')) {
+                    the_row();
+
+                    $menu[] = array(
+                        'item'        => get_sub_field('field_58e81869b4294', 'options'),
+                        'description' => get_sub_field('field_58e8186eb4295', 'options'),
+                        'price'       => get_sub_field('field_58e8218b6503d', 'options'),
+                    );
+                }
+                $menus[] = array(
+                    'title'       => get_sub_field('field_58e81852e57b8', 'options'),
+                    'description' => get_sub_field('field_58e81857e57b9', 'options'),
+                    'menu'        => $menu,
+                );
+
+            }
+        }
+    }
+    return $menus;
 }

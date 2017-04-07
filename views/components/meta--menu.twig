@@ -1,0 +1,23 @@
+"menu":{
+	"@type":"Menu",
+	{% if food %}{% for food in food %}
+	"hasMenuSection":{
+		"@type":"MenuSection",
+		"name":"{{food.title}}",
+		{% if food.description != null %}"description":"{{food.description}}",{% endif %}
+		{% for item in food.menu %}
+		"hasMenuItem":{
+			"@type":"MenuItem",
+			"name":"{{item.item}}",
+			"description":"{{item.description}}",
+		{% if item.price %}
+			"offers":{
+				"@type":"Offer",
+				"price":"{{item.price}}",
+				"priceCurrency":"USD"
+			},
+		{% endif %}
+		},
+	{% endfor %}
+	},
+	{% endfor %}{% endif %}

@@ -1,32 +1,19 @@
-{% if home.menu.food %}
+{% if food %}
 	<section class="section--menu spacing--horiz-1 spacing--vert-1 spacing--dsk-horiz-5 spacing--dsk-vert-4 bg--gradient-pink-gold">
-		
 		<div class="block--menu-wrap bg--white spacing--dsk-vert-5 spacing--dsk-horiz-5 bg--texture">
 			<div class="gold-border flex flex--wrap justify--around" itemscope itemtype="http://schema.org/Menu" itemprop="http://schema.org/hasMenuSection">
-				{% if home.menu.food %}
+				{% for food in food %}
 					<div class="grid--one grid--sm-two-fifths spacing--horiz-2 spacing--vert-2" itemscope itemtype="http://schema.org/MenuSection">
-						<h5 class="color--green" itemprop="name">Food</h5>
+						<h5 class="color--green" itemprop="name">{{food.title}}</h5>
 						<br>
-						{% for item in home.menu.food %}
+						{% for item in food.menu %}
 							<div itemprop="hasMenuItem" itemscope type="http://schema.org/MenuItem">
 								<h4 itemprop="name">{{item.item}}</h4>
 								<p itemprop="description">{{item.description}}</p>
 							</div>
 						{% endfor %}
 					</div>
-				{% endif %}
-				{# {% if home.menu.cocktails %}
-					<div class="grid--one grid--sm-two-fifths spacing--horiz-2 spacing--vert-2" itemscope itemtype="http://schema.org/MenuSection" itemprop="hasMenuItem">
-						<h5 class="color--green"  itemprop="name">Cocktails</h5>
-						<br>
-						{% for item in home.menu.cocktails %}
-							<div itemscope itemprop="http://schema.org/MenuItem">
-								<h4 itemprop="name">{{item.item}}</h4>
-								<p itemprop="description">{{item.description}}</p>
-							</div>
-						{% endfor %}
-					</div>
-				{% endif %} #}
+				{% endfor %}
 			</div>
 		</div>
 	</section>
