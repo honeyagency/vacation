@@ -1,7 +1,14 @@
 header {
     .icon-logo {
         svg {
-            height: 100px;
+            // height: 100px;
+       
+        }
+    }
+
+    .icon-logo-horizontal {
+        svg {
+            width: 242px;
         }
     }
 }

@@ -1,0 +1,211 @@
+fieldset {
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+    font-weight: 100;
+    padding: 0;
+}
+
+label {
+    display: block;
+    font-weight: 100;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    font-family: $default-font;
+    font-size: $base-font-size;
+    padding: 6px 9px;
+    font-size: 0.9em;
+}
+
+#{$all-text-inputs} {
+    color: $black;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 5px solid map-get($gold, main);
+    font-family: $heading-font-family;
+    text-transform: uppercase;
+    border-radius: 0;
+    transform: skewY(-1deg);
+    box-shadow: none;
+    box-sizing: border-box;
+    transition: border-color .3s ease-in-out;
+    margin-bottom: 1em;
+    padding: 6px 9px;
+    font-size: 0.9em;
+
+    // &:hover {
+    //     border-color: darken(map-get($brown, main), 10%);
+    // }
+
+    &:focus {
+        box-shadow: 0;
+        outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+        color: map-get($gold, main);
+    }
+
+    &:-moz-placeholder {
+        /* Firefox 18- */
+        color: map-get($gold, main);
+    }
+
+    &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: map-get($gold, main);
+    }
+
+    &:-ms-input-placeholder {
+        color: map-get($gold, main);
+    }
+}
+
+select {
+    background-color: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    border-color: $black;
+
+    &.icon-arrow-down {
+        background-size: 10px;
+        background-position: 95% 50%;
+    }
+}
+
+textarea {
+    resize: vertical;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    display: inline;
+}
+
+[type="file"] {
+    width: 100%;
+}
+
+select {
+    width: 100%;
+
+    &:hover, &:active, &:focus {
+        cursor: pointer;
+        outline: none;
+    }
+}
+
+[type="submit"] {
+    border-radius: 0;
+    display: block;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+
+    &:hover, &:active, &:focus {
+        outline: none;
+        cursor: pointer;
+    }
+
+    &.button {
+        padding: 8px 12px 7px 12px;
+        font-size: 0.75em;
+        letter-spacing: 2px;
+        line-height: 1.2;
+    }
+
+    &.center {
+        margin: 0 auto;
+    }
+}
+
+// contact form
+.wpcf7-validation-errors, .wpcf7-spam-blocked {
+    display: table !important;
+    border: 0 !important;
+    margin: 0 !important;
+    background-color: darken(map-get($pink, main), 10%) !important;
+    color: white;
+    text-align: center;
+    padding: 1em !important;
+    width: 100%;
+}
+
+.wpcf7-not-valid-tip {
+    background-color: darken(map-get($pink, main), 10%);
+    color: white !important;
+    margin-top: -16px;
+    margin-bottom: 0.8em;
+    padding: 6px 9px;
+    border: 1px solid $black;
+    border-top: none;
+    font-size: 0.9em !important;
+}
+
+.wpcf7-validates-as-required {
+    &:after {
+        content: ' ';
+        display: inline-block;
+    }
+}
+
+.captcha {
+    .wpcf7-not-valid-tip {
+        display: none !important;
+    }
+
+    overflow: hidden;
+    height: 64px;
+    width: 155px;
+
+    @include media($screen-sm) {
+        margin-top: -55px;
+    }
+
+
+    .wpcf7-form-control {
+        top: -10px;
+        position: relative;
+        left: -1px;
+    }
+}
+
+.menu-218 {
+    @include media($max-sm) {
+        select {
+            margin-bottom: 1em;
+        }
+    }
+}
+
+.screenreaderonly {
+    @include hide-visually;
+}
+
+#mc_embed_signup_scroll {
+    position: relative;
+
+    .submitbutton {
+        position: absolute;
+        top: 0px;
+        right: 20px;
+
+        .icon-plane {
+            background-size: 20px;
+            background-position: 90%;
+            background-color: transparent;
+        }
+    }
+}

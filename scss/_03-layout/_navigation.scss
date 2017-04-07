@@ -5,6 +5,34 @@ nav {
         li {
             margin: 0;
             display: inline-block;
+
+            a {
+                position: relative;
+
+                &:after {
+                    content: ' ';
+                    display: block;
+                    position: absolute;
+                    width: 110%;
+                    background: map-get($pink, main);
+                    height: 3px;
+                    opacity: 0;
+                    bottom: 0;
+                    transform: translateX(-50%) translateY(50%) rotate(-2deg);
+                    left: 50%;
+                    transition: opacity 0.1s $base-cubic, bottom 0.1s $base-cubic;
+                    transition-delay: .05s;
+                }
+
+                &:hover {
+                    &:after {
+
+                        transition: opacity 0.1s $base-cubic, bottom 0.1s $base-cubic;
+                        opacity: 1;
+                        bottom: 50%;
+                    }
+                }
+            }
         }
     }
 }
