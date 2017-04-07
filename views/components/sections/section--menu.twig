@@ -2,13 +2,13 @@
 	<section class="section--menu spacing--horiz-1 spacing--vert-1 spacing--dsk-horiz-5 spacing--dsk-vert-4 bg--gradient-pink-gold">
 		
 		<div class="block--menu-wrap bg--white spacing--dsk-vert-5 spacing--dsk-horiz-5 bg--texture">
-			<div class="gold-border flex flex--wrap justify--around" itemscope itemtype="http://schema.org/Menu">
+			<div class="gold-border flex flex--wrap justify--around" itemscope itemtype="http://schema.org/Menu" itemprop="http://schema.org/hasMenuSection">
 				{% if home.menu.food %}
-					<div class="grid--one grid--sm-two-fifths spacing--horiz-2 spacing--vert-2"  itemprop="http://schema.org/MenuSection">
+					<div class="grid--one grid--sm-two-fifths spacing--horiz-2 spacing--vert-2"  itemtype="http://schema.org/MenuSection" itemprop="hasMenuItem">
 						<h5 class="color--green" itemprop="name">Food</h5>
 						<br>
 						{% for item in home.menu.food %}
-							<div itemscope itemprop="http://schema.org/MenuItem">
+							<div  type="http://schema.org/MenuItem">
 								<h4 itemprop="name">{{item.item}}</h4>
 								<p itemprop="description">{{item.description}}</p>
 							</div>
@@ -16,11 +16,11 @@
 					</div>
 				{% endif %}
 				{% if home.menu.cocktails %}
-					<div class="grid--one grid--sm-two-fifths spacing--horiz-2 spacing--vert-2"  itemprop="http://schema.org/MenuSection">
+					<div class="grid--one grid--sm-two-fifths spacing--horiz-2 spacing--vert-2" itemtype="http://schema.org/MenuSection" itemprop="hasMenuItem">
 						<h5 class="color--green"  itemprop="name">Cocktails</h5>
 						<br>
 						{% for item in home.menu.cocktails %}
-							<div itemscope itemprop="http://schema.org/MenuItem">
+							<div  itemprop="http://schema.org/MenuItem">
 								<h4 itemprop="name">{{item.item}}</h4>
 								<p itemprop="description">{{item.description}}</p>
 							</div>
