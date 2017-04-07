@@ -54,3 +54,17 @@ function prepareHomePageFields()
     );
     return $section;
 }
+
+function prepareOptionsPage()
+{
+    $imageID = get_field('field_58e80d8f357a7', 'options');
+    if (!empty($imageID)) {
+        $image = new TimberImage($imageID);
+    } else {
+        $image = null;
+    }
+    $section = array(
+        'image' => $image,
+    );
+    return $section;
+}

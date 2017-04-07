@@ -41,6 +41,7 @@ class StarterSite extends TimberSite
         $context['site']   = $this;
         $context['header'] = prepareHeaderFields();
         $context['assets'] = get_template_directory_uri() . '/app';
+        $context['options'] = prepareOptionsPage();
 
         return $context;
     }
