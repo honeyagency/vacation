@@ -22,8 +22,16 @@
       "@context": "http://schema.org/",
       "@type": "Restaurant",
       "name": "{{site.name}}",
-      "image": "{{options.image}}"
-      "servesCuisine": "American"
+      "image": "{{options.image}}",
+      "servesCuisine": "American",
+      "phone": "{{options.phone}}",
+      "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "{{options.address.city}}",
+            "addressRegion": "{{options.address.stae}}",
+            "postalCode": "{{options.address.zip}}",
+            "streetAddress": "{{options.address.street}}"
+        },
     }
 
     </script>

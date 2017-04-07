@@ -63,8 +63,16 @@ function prepareOptionsPage()
     } else {
         $image = null;
     }
+    $address = array(
+        'street' => get_field('field_58e80f0e1cb1a', 'options'),
+        'city'   => get_field('field_58e8102e5bac8', 'options'),
+        'state'  => get_field('field_58e810275bac7', 'options'),
+        'zip'    => get_field('field_58e810065bac6', 'options'),
+    );
     $section = array(
-        'image' => $image,
+        'image'        => $image,
+        'address'      => $address,
+        'phone_number' => get_field('field_58e80f2fae445', 'options'),
     );
     return $section;
 }
