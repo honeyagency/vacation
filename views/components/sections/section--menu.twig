@@ -4,18 +4,18 @@
 		<div class="block--menu-wrap bg--white spacing--dsk-vert-5 spacing--dsk-horiz-5 bg--texture">
 			<div class="gold-border flex flex--wrap justify--around" itemscope itemtype="http://schema.org/Menu" itemprop="http://schema.org/hasMenuSection">
 				{% if home.menu.food %}
-					<div class="grid--one grid--sm-two-fifths spacing--horiz-2 spacing--vert-2" itemscope itemtype="http://schema.org/MenuSection" itemprop="hasMenuItem">
+					<div class="grid--one grid--sm-two-fifths spacing--horiz-2 spacing--vert-2" itemscope itemtype="http://schema.org/MenuSection">
 						<h5 class="color--green" itemprop="name">Food</h5>
 						<br>
 						{% for item in home.menu.food %}
-							<div itemscope type="http://schema.org/MenuItem">
+							<div itemprop="hasMenuItem" itemscope type="http://schema.org/MenuItem">
 								<h4 itemprop="name">{{item.item}}</h4>
 								<p itemprop="description">{{item.description}}</p>
 							</div>
 						{% endfor %}
 					</div>
 				{% endif %}
-				{% if home.menu.cocktails %}
+				{# {% if home.menu.cocktails %}
 					<div class="grid--one grid--sm-two-fifths spacing--horiz-2 spacing--vert-2" itemscope itemtype="http://schema.org/MenuSection" itemprop="hasMenuItem">
 						<h5 class="color--green"  itemprop="name">Cocktails</h5>
 						<br>
@@ -26,7 +26,7 @@
 							</div>
 						{% endfor %}
 					</div>
-				{% endif %}
+				{% endif %} #}
 			</div>
 		</div>
 	</section>
