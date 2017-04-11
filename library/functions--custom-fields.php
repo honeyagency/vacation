@@ -45,6 +45,7 @@ function prepareOptionsPage()
         'image'        => $image,
         'address'      => $address,
         'phone_number' => get_field('field_58e80f2fae445', 'options'),
+        'pricerange'   => get_field('field_58ed166416862', 'options'),
     );
     return $section;
 }

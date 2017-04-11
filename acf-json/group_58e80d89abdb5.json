@@ -122,6 +122,25 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_58ed166416862",
+            "label": "Price Range",
+            "name": "price_range",
+            "type": "text",
+            "instructions": "This is for google. $$ means items cost from $0-$99, $$$ means items cost $0-$999",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -141,5 +160,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1491607047
+    "modified": 1491932828
 }

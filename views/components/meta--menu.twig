@@ -11,13 +11,14 @@
 				"@type":"MenuItem",
 				"name":"{{item.item}}",
 				"description":"{{item.description}}",
-				{% if item.price %}
-					"offers":{
+{% if item.price %}
+				"offers":{
 						"@type":"Offer",
 						"price":"{{item.price}}",
 						"priceCurrency":"USD"
-					},{% endif %}
-"suitableForDiet": ""
+					},
+{% endif %}
+				"suitableForDiet": ""
 				}{% if loop.last %}{% else %},{% endif %}
 
 			{% endfor %}
