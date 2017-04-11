@@ -10,6 +10,7 @@
 			"@type":"MenuItem",
 			"name":"{{item.item}}",
 			"description":"{{item.description}}",
+			"suitableForDiet": "",
 		{% if item.price %}
 			"offers":{
 				"@type":"Offer",
@@ -17,9 +18,7 @@
 				"priceCurrency":"USD"
 			},
 		{% endif %}
-		"suitableForDiet": "",
 		},
-		
 	{% endfor %}
 	},
 	{% endfor %}
