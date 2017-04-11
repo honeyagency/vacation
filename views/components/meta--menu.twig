@@ -1,29 +1,29 @@
 "menu":{
-	"@type":"Menu",
+		"@type":"Menu",
 	{% if food %}
-		"hasMenuSection": [
+	"hasMenuSection":[
 		{% for food in food %}
-			{
-		"@type":"MenuSection",
-		"name":"{{food.title}}",
+		{
+			"@type":"MenuSection",
+			"name":"{{food.title}}",
 		{% if food.description != null %}"description":"{{food.description}}",{% endif %}
-		{% for item in food.menu %}
-		"hasMenuItem":{
-			"@type":"MenuItem",
-			"name":"{{item.item}}",
-			"description":"{{item.description}}",
-			"suitableForDiet": "",
-		{% if item.price %}
-			"offers":{
-				"@type":"Offer",
-				"price":"{{item.price}}",
-				"priceCurrency":"USD"
-			},
-		{% endif %}
-	
-	{% endfor %}
-	},
-	{% endfor %}
-	],
-	{% endif %}
-}
+	{% for item in food.menu %}"hasMenuItem":{
+				"@type":"MenuItem",
+				"name":"{{item.item}}",
+				"description":"{{item.description}}",
+				{% if item.price %}
+					"offers":{
+						"@type":"Offer",
+						"price":"{{item.price}}",
+						"priceCurrency":"USD"
+					},{% endif %}
+"suitableForDiet": ""
+				}{% if loop.last %}{% else %},{% endif %}
+
+			{% endfor %}
+}{% if loop.last %}{% else %},{% endif %}
+{% endfor %}
+
+		]
+{% endif %}
+	}
