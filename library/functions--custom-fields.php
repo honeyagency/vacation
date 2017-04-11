@@ -63,7 +63,7 @@ function prepareRestaurantMenus()
                     $menu[] = array(
                         'item'        => get_sub_field('field_58e81869b4294', 'options'),
                         'description' => get_sub_field('field_58e8186eb4295', 'options'),
-                        'price'       => get_sub_field('field_58e8218b6503d', 'options'),
+                        'price'       => get_sub_field('field_58ed14ca4aeeb', 'options'),
                     );
                 }
                 $menus[] = array(
