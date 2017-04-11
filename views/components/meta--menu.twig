@@ -1,7 +1,8 @@
 "menu":{
 	"@type":"Menu",
-	{% if food %}{% for food in food %}
-	"hasMenuSection":{
+	{% if food %}
+		{% for food in food %}
+	"hasMenuSection": [
 		"@type":"MenuSection",
 		"name":"{{food.title}}",
 		{% if food.description != null %}"description":"{{food.description}}",{% endif %}
@@ -18,7 +19,7 @@
 				"priceCurrency":"USD"
 			},
 		{% endif %}
-		},
+		],
 	{% endfor %}
 	},
 	{% endfor %}
