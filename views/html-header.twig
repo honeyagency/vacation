@@ -35,13 +35,12 @@
       "url": "{{site.url}}",
       "priceRange": "{{options.pricerange}}",
       {% if options.hours %}"openingHoursSpecification": [
-        {% for hour in options.hours %}{
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "{{options.hours.day}}",
-          "opens": "{{options.hours.openTime}}",
-          "closes": "{{options.hours.closeTime}}"
-        }{% if loop.last %}{% else %},{% endif %}
-
+      {% for hour in options.hours %}{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "{{hour.day}}",
+        "opens": "{{hour.openTime|date('H:i')}}",
+        "closes": "{{hour.closeTime|date('H:i')}}"
+      }{% if loop.last %}{% else %},{% endif %}
       {% endfor %}],
 {% endif  %}
       {% include 'components/meta--menu.twig' %}
