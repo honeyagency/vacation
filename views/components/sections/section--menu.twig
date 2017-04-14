@@ -1,15 +1,16 @@
 {% if food %}
-	<section class="section--menu spacing--horiz-1 spacing--vert-1 spacing--dsk-horiz-5 spacing--dsk-vert-4 bg--gradient-pink-gold">
+	<section class="section--menu spacing--horiz-1 spacing--vert-1 spacing--dsk-horiz-5 spacing--dsk-vert-4 bg--gradient-pink-gold icon-menu-bg-icons">
 		<div class="block--menu-wrap bg--white spacing--dsk-vert-5 spacing--dsk-horiz-5 bg--texture">
 			<div class="gold-border flex flex--wrap justify--around" >
 				{% for food in food %}
-					<div class="grid--one grid--sm-two-fifths spacing--horiz-2 spacing--vert-2" >
-						<h5 class="color--green">{{food.title}}</h5>
-						<br>
+					<div class="grid--one grid--sm-two-fifths spacing--horiz-2 spacing--vert-6" >
+						<h5 class="color--green-light">{{food.title}}<hr class="five shift color--green-light"></h5>
+						<div class="spacing--vert-2">
 						{% for item in food.menu %}
 							<h4>{{item.item}}</h4>
 							<p>{{item.description}}</p>
 						{% endfor %}
+						</div>
 					</div>
 				{% endfor %}
 			</div>

@@ -2,6 +2,10 @@
     color: map-get($green, main);
 }
 
+.color--green-light {
+    color: map-get($green, light);
+}
+
 .color--pink {
     color: map-get($pink, main);
 }

@@ -57,3 +57,27 @@
 .border--left-3 {
     border-left: 3px solid;
 }
+
+hr {
+    border: 0;
+    border-top: 1px solid;
+
+    &.two {
+        border-top: 2px solid;
+    }
+
+    &.three {
+        border-top: 3px solid;
+    }
+
+    &.four {
+        border-top: 4px solid;
+    }
+
+    &.five {
+        border-top: 5px solid;
+    }
+    &.shift{
+        transform: rotate(-1deg);
+    }
+}

@@ -41,12 +41,25 @@ function prepareOptionsPage()
         'state'  => get_field('field_58e810275bac7', 'options'),
         'zip'    => get_field('field_58e810065bac6', 'options'),
     );
+    if (have_rows('field_58f0fc42a8c1a', 'option')) {
+        $hours = array();
+        while (have_rows('field_58f0fc42a8c1a', 'option')) {
+            the_row();
+            $hours[] = array(
+                'day'       => get_sub_field('field_58f0fca4a8c1b', 'option'),
+                'openTime'  => get_sub_field('field_58f0fcaaa8c1c', 'option'),
+                'closeTime' => get_sub_field('field_58f0fcb8a8c1d', 'option'),
+            );
+        }
+    }
     $section = array(
         'image'        => $image,
         'address'      => $address,
         'phone_number' => get_field('field_58e80f2fae445', 'options'),
         'pricerange'   => get_field('field_58ed166416862', 'options'),
+        'hours'        => $hours,
     );
+
     return $section;
 }
 function prepareRestaurantMenus()

@@ -76,9 +76,48 @@ add_filter('upload_mimes', 'cc_mime_types');
 // Setting up ACF options page
 if (function_exists('acf_add_options_page')) {
     acf_add_options_page();
-    acf_add_options_sub_page('Site Options');
+    acf_add_options_sub_page('Restaurant Info');
     acf_add_options_sub_page('Menus');
 }
 
 require_once 'functions--custom-fields.php';
 require_once 'functions--custom-posts.php';
+
+function custom_menu_order($menu_ord)
+{
+
+    if (!$menu_ord) {
+        return true;
+    }
+
+    return array(
+        'index.php', // Dashboard
+        'separator1', // First separator
+        'edit.php', // Posts
+        'upload.php', // Media
+        'acf-options-restaurant-info',
+        'link-manager.php', // Links
+        'edit.php?post_type=page', // Pages
+        'separator2', // Second separator
+        'themes.php', // Appearance
+        'plugins.php', // Plugins
+        'users.php', // Users
+        'options-general.php', // Settings
+        'separator-last', // Last separator
+    );
+
+}
+add_filter('custom_menu_order', 'custom_menu_order'); // Activate custom_menu_order
+add_filter('menu_order', 'custom_menu_order');
+
+add_action('admin_init', 'my_remove_menu_pages');
+function my_remove_menu_pages()
+{
+
+    global $user_ID;
+
+    if (current_user_can('administrator') != true) {
+        remove_menu_page('edit-comments.php');
+        remove_menu_page('tools.php');
+    }
+}
