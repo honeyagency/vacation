@@ -19,10 +19,31 @@ function prepareHomePageFields()
         'title'       => get_field('field_58a785bf9d01f'),
         'description' => get_field('field_58a785d29d020'),
     );
+    if (have_rows('field_58f10c28ccfb6')) {
+        $hours = array();
+        while (have_rows('field_58f10c28ccfb6')) {
+            the_row();
+            $hours[] = array(
+                'days'  => get_sub_field('field_58f10c48ccfb7'),
+                'hours' => get_sub_field('field_58f10c54ccfb8'),
+            );
+        }
+    }
+    $homeGaleryArray = get_field('field_58f647f3f5147');
+
+    if (!empty($homeGaleryArray)) {
+        foreach ($homeGaleryArray as $image) {
+            $homeGallery[] = new TimberImage($image['id']);
+        }
+    } else {
+        $homeGallery = null;
+    }
 
     $section = array(
-        'email' => $email,
-        'food'  => $menus,
+        'email'   => $email,
+        'hours'   => $hours,
+        'food'    => $menus,
+        'gallery' => $homeGallery,
     );
     return $section;
 }

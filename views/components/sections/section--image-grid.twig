@@ -1,0 +1,23 @@
+<section class="section--image-grid spacing--vert-3">
+	<div class="text--right spacing--gutter">
+		<a href="" class="button font--larger" id="viewGallery">View More</a>
+	</div>
+	<div class="block--init-images grid--one flex flex--wrap justify--around spacing--gutter">
+		{% for image in home.gallery %}
+			{% if loop.index <= 4 %}
+				<div id="element-{{loop.index}}">
+					<img src="{{image}}" data-action="zoom">
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+	<div class="block--more-images grid--one spacing--gutter">
+		{% for image in home.gallery %}
+			{% if loop.index > 4 %}
+				<div id="element-{{loop.index + 4 }}">
+					<img src="{{image}}" data-action="zoom">
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+</section>

@@ -195,7 +195,7 @@
             "label": "Hours",
             "name": "open_time",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "This is for google, to update the homepage hours, edit the homepage.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -291,5 +291,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1492190591
+    "modified": 1492192280
 }

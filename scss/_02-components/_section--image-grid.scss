@@ -1,0 +1,81 @@
+.section--image-grid {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+
+    img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1em;
+        display: block;
+    }
+
+    .block--init-images {
+        div {
+            transition: flex-basis 0.1s $base-cubic;
+
+            @extend .grid--one;
+
+            &:nth-of-type(1) {
+                @extend .grid--sm-third;
+            }
+
+            &:nth-of-type(2), &:nth-of-type(3) {
+                @extend .grid--sm-half;
+            }
+
+            &:nth-of-type(4) {
+                @extend .grid--sm-fourth;
+            }
+        }
+    }
+
+    .block--more-images {
+        position: absolute;
+        opacity: 0;
+        left: 100%;
+        transition: left 0.3s $base-cubic, opacity 0.6s $base-cubic;
+        column-gap: 1em;
+        column-count: 2;
+
+        @include media($screen-sm) {
+            column-count: 4;
+        }
+
+
+        img {
+            margin-top: 50px;
+            transition: margin 0.5s $base-cubic;
+        }
+    }
+
+    &.viewingMore {
+        .block--init-images {
+            align-items: flex-end;
+            justify-content: space-between;
+
+            div {
+                @extend .grid--half;
+
+                @extend .grid--sm-fourth;
+
+                transition: flex-basis 0.1s $base-cubic;
+            }
+        }
+
+        .block--more-images {
+            position: relative;
+            opacity: 1;
+            left: 0;
+            transition: left 0.2s $base-cubic, opacity 0.6s $base-cubic;
+
+            div {
+                img {
+                    margin-top: 0;
+                    transition: margin 0.7s $base-cubic;
+                }
+            }
+        }
+    }
+}
+

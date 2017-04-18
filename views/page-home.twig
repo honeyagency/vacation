@@ -1,9 +1,12 @@
 {% extends "base.twig" %}
 {% block content %}
 	{% include 'components/sections/section--hero-content.twig' %}
-	{% include 'components/sections/section--email-signup.twig' %}
-	<section class="bg--green color--white spacing--gutter spacing--vert-2">
-		{{post.content}}
+	<section class="bg--texture spacing--vert-4">
+		{% include 'components/sections/section--email-signup.twig' %}
+		{% include 'components/sections/section--home-hours.twig' %}
 	</section>
 	{% include 'components/sections/section--menu.twig' %}
+	<section class="bg--texture">
+		{% include 'components/sections/section--image-grid.twig' %}
+	</section>
 {% endblock %}

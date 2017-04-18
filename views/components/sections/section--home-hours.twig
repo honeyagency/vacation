@@ -1,0 +1,21 @@
+<div class="section--home-hours bg--white margin--center icon-gold-border">
+	<div class="vertical--center text--center">
+		{% if home.hours %}
+			<div>
+				<h5>OPEN</h5>
+				{% for hours in home.hours %}
+					<div class="font--largest letter--1">
+						<span>{{hours.days}}</span>
+						<span>{{hours.hours}}</span>
+					</div>
+				{% endfor %}
+			{% endif %}
+		</div>
+		<hr class="color--green-light shift five grid--third">
+		<div class="font--largest letter--1">
+			<span>{{options.address.street}}</span><br>
+			<span>{{options.address.city}}</span><br>
+			<span>{{options.address.state}} {{options.address.zip}}</span>
+		</div>
+	</div>
+</div>
