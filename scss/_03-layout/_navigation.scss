@@ -24,7 +24,7 @@ nav {
                     transition-delay: .05s;
                 }
 
-                &:hover {
+                &:hover, &.current {
                     &:after {
 
                         transition: opacity 0.1s $base-cubic, bottom 0.1s $base-cubic;

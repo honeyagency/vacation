@@ -3,5 +3,8 @@ header {
     position: relative;
 
     &.header {
+        position: sticky;
+        top: 0;
+        box-shadow: 0 0 5px 0px rgba(22, 51, 35, 0.3);
     }
 }
