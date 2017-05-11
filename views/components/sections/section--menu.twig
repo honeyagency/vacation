@@ -4,11 +4,11 @@
 			<div class="gold-border">
 				{% for food in food %}
 					<div class="block--menu grid--one grid--sm-two-fifths spacing--dsk-horiz-2 spacing--dsk-vert-6" >
-						<h5 id="menu-{{loop.index}}" class="color--green-light">{{food.title}}<hr class="five shift color--green-light"></h5>
+					{# 	<h5 id="menu-{{loop.index}}" class="color--green-light">{{food.title}}<hr class="five shift color--green-light"></h5> #}
 						<div class="spacing--vert-2">
 						{% for item in food.menu %}
 							<h4>{{item.item}}</h4>
-							<h5 class="font--rn">{{item.subtitle}}</h5>
+							<h6 class="font--rn color--gold transform--no">{{item.subtitle}}</h6>
 							<p class="font--thin">{{item.description}}</p>
 						{% endfor %}
 						</div>

@@ -17,7 +17,8 @@ jQuery(document).ready(function($) {
                 slidesToScroll: 1,
                 slidesToShow: 1,
                 speed: 200,
-                swipe: false
+                swipe: false,
+                adaptiveHeight:true
             });
             $('.mobile--menu-navigation-track').slick({
                 asNavFor: '.mobile--menu',

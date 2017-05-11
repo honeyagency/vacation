@@ -20,11 +20,10 @@
 			<div class="gold-border mobile--menu">
 				{% for food in food %}
 					<div class="block--menu  grid--one">
-						<h5 id="menu-{{loop.index}}" class="color--green-light">{{food.title}}<hr class="five shift color--green-light"></h5>
+					{# 	<h5 id="menu-{{loop.index}}" class="color--green-light">{{food.title}}<hr class="five shift color--green-light"></h5> #}
 						<div class="spacing--vert-2">
 						{% for item in food.menu %}
 							<h4>{{item.item}}</h4>
-							<h6 class="font--rn">{{item.subtitle}}</h6>
 							<p class="font--thin">{{item.description}}</p>
 						{% endfor %}
 						</div>

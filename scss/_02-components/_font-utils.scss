@@ -19,7 +19,7 @@
 }
 
 .font--rn {
-    font-family: 'ronnia-condensed';
+    font-family: $heading-font-family;
 }
 
 .font--larger {
@@ -82,4 +82,7 @@
 
 .font--sans {
     font-family: $default-font;
+}
+.transform--no{
+    text-transform: none !important;
 }
