@@ -98,6 +98,7 @@ function prepareRestaurantMenus()
 
                     $menu[] = array(
                         'item'        => get_sub_field('field_58e81869b4294', 'options'),
+                        'subtitle'    => get_sub_field('field_5914eabc1e13a', 'options'),
                         'description' => get_sub_field('field_58e8186eb4295', 'options'),
                         'price'       => get_sub_field('field_58ed14ca4aeeb', 'options'),
                     );

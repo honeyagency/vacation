@@ -31,7 +31,8 @@ jQuery(document).ready(function($) {
                 slidesToScroll: 1,
                 slidesToShow: 1,
                 swipe: true,
-                speed: 300,
+                swipeToSlide:true,
+                speed: 200,
 
                 prevArrow: $prev,
                 nextArrow: $next
