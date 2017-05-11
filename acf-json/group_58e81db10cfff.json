@@ -41,6 +41,30 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_5914a72c78924",
+                    "label": "Image (mobile)",
+                    "name": "image_mobile",
+                    "type": "image",
+                    "instructions": "This is the icon used in the mobile navigation",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
                     "key": "field_58e81857e57b9",
                     "label": "Description",
                     "name": "menu_description",
@@ -157,5 +181,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1491932413
+    "modified": 1494525767
 }

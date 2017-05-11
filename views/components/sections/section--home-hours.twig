@@ -1,8 +1,10 @@
-<div data-nav="hours-location" id="hours-location" class="section--home-hours bg--white margin--center icon-gold-border has--nav">
-	<div class="vertical--center text--center">
+<div data-nav="hours-location" id="hours-location" class="section--home-hours bg--white margin--center icon-gold-border has--nav spacing--gutter-mob spacing--vert-1 spacing--dsk-vert-0">
+	<i class="icon-deco hidden--dsk top left" data-grunticon-embed></i>
+	<i class="icon-deco hidden--dsk top right" data-grunticon-embed></i>
+	<div class="vertical--center-dsk text--center spacing--vert-2 spacing--dsk-vert-0">
 		{% if home.hours %}
 			<div>
-				<h5>OPEN</h5>
+				<h4>OPEN</h4>
 				{% for hours in home.hours %}
 					<div class="font--largest letter--1">
 						<span>{{hours.days}}</span>
@@ -11,11 +13,14 @@
 				{% endfor %}
 			{% endif %}
 		</div>
-		<hr class="color--green-light shift five grid--third">
+		<i class="icon-divider block margin--center margin--vert-2" data-grunticon-embed></i>
+	
 		<div class="font--largest letter--1">
 			<span>{{options.address.street}}</span><br>
 			<span>{{options.address.city}}</span><br>
 			<span>{{options.address.state}} {{options.address.zip}}</span>
 		</div>
 	</div>
+	<i class="icon-deco hidden--dsk bottom left" data-grunticon-embed></i>
+	<i class="icon-deco hidden--dsk bottom right" data-grunticon-embed></i>
 </div>

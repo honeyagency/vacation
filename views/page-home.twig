@@ -1,10 +1,17 @@
 {% extends "base.twig" %}
 {% block content %}
 	{% include 'components/sections/section--hero-content.twig' %}
-	<section class="bg--texture spacing--vert-4">
+	{# <section class="text--center spacing--vert-2">
+		<a href="" class="takemeaway bg--pink color--white spacing--vert-1 spacing--horiz-2">Lets go to the beach</a>
+	</section> #}
+	<section class="section--home-intro bg--texture spacing--dsk-vert-4">
 		{% include 'components/sections/section--email-signup.twig' %}
 		{% include 'components/sections/section--home-hours.twig' %}
+		{% include 'components/sections/section--home-description.twig' %}
 	</section>
+
+	{# {% include 'components/sections/section--video.twig' %} #}
+	{% include 'components/sections/section--mobile-menu-nav.twig' %}
 	{% include 'components/sections/section--menu.twig' %}
 	<section class="bg--texture">
 		{% include 'components/sections/section--image-grid.twig' %}

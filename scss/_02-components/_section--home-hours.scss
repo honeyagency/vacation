@@ -1,12 +1,13 @@
 .section--home-hours {
-    height: calc(70vw - 5em);
-    width: calc(100vw - 5em);
-    background-size: 100% 100%;
+    
+
+    
 
     @include media($screen-xs) {}
 
 
     @include media($screen-sm) {
+        background-size: 100% 100%;
         height: calc(57vw - 5em);
         width: calc(80vw - 5em);
     }

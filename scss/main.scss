@@ -30,14 +30,18 @@
   '_02-components/flex',
   '_02-components/font-utils',
   '_02-components/grid',
+  '_02-components/margin',
   '_02-components/section--email-signup',
   '_02-components/section--hero-content',
   '_02-components/section--home-hours',
+  '_02-components/section--home-video',
   '_02-components/section--image-grid',
   '_02-components/section--menu',
+  '_02-components/section--mobile-menu-nav',
   '_02-components/icons',
   '_02-components/spacing';
 
 @import
-
+  '_07-vendors/slick',
   '_04-pages/home';
+

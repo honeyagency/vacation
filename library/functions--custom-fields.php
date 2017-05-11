@@ -40,10 +40,11 @@ function prepareHomePageFields()
     }
 
     $section = array(
-        'email'   => $email,
-        'hours'   => $hours,
-        'food'    => $menus,
-        'gallery' => $homeGallery,
+        'email'       => $email,
+        'hours'       => $hours,
+        'description' => get_field('field_59137a9985eb2'),
+        'food'        => $menus,
+        'gallery'     => $homeGallery,
     );
     return $section;
 }
@@ -101,8 +102,15 @@ function prepareRestaurantMenus()
                         'price'       => get_sub_field('field_58ed14ca4aeeb', 'options'),
                     );
                 }
+                $imageId = get_sub_field('field_5914a72c78924', 'options');
+                if (!empty($imageId)) {
+                    $image = new TimberImage($imageId);
+                } else {
+                    $image = null;
+                }
                 $menus[] = array(
                     'title'       => get_sub_field('field_58e81852e57b8', 'options'),
+                    'image'       => $image,
                     'description' => get_sub_field('field_58e81857e57b9', 'options'),
                     'menu'        => $menu,
                 );

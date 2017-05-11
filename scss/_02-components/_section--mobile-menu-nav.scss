@@ -1,0 +1,95 @@
+.section--mobile-menu-nav {
+    overflow: hidden;
+    position: relative;
+
+    .slick-list {
+        overflow-x: auto !important;
+    }
+
+    button {
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+
+        // background: map-get($green, light);
+        background: transparent;
+        border: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        -webkit-tap-highlight-color: transparent !important;
+
+        &:active, &:focus {
+            -webkit-appearance: none;
+            outline: none;
+            -webkit-tap-highlight-color: transparent !important;
+        }
+
+        &.previous {
+            left: 0;
+
+            i {
+                transform-origin: center;
+                transform: rotate(180deg);
+            }
+        }
+
+        &.next {
+            right: 0;
+        }
+
+        z-index: 999;
+
+        i {
+            width: $mobile-spacing;
+            display: inline-block;
+
+            svg {
+                path {
+                    fill: white;
+                }
+            }
+        }
+        opacity: .75;
+        transition: opacity .15s $base-cubic;
+        &.slick-disabled{
+            opacity: .05;
+            transition: opacity .15s $base-cubic;
+        }
+    }
+
+    div {
+        ul {
+            // overflow-x: auto;
+            // overflow-y: hidden;
+            // -webkit-overflow-scrolling: touch;
+            // white-space: nowrap;
+            list-style-type: none;
+            margin: 0;
+            margin-bottom: -1px;
+
+            .block--mobile-menu-nav-item {
+                // border: 1px solid yellow;
+                outline: none;
+
+                &:first-of-type {
+                    // margin-left: 10px;
+               
+                }
+
+                margin: 0;
+
+                // -webkit-margin-end: -6px;
+                display: inline-block;
+
+                img {
+                    float: none;
+                    width: 100px !important;
+                    margin-bottom: $mobile-spacing;
+                    display: initial;
+                }
+            }
+        }
+    }
+}

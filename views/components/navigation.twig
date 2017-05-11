@@ -1,5 +1,5 @@
-<nav role="navigation" class="grid--sm-half">
-	<ul class="flex flex--wrap justify--between">
+<nav role="navigation" class="grid--sm-half navigation">
+	<ul class="dsk--flex flex--wrap justify--between">
 		{% for item in menu.get_items %}
 			<li class="nav-item {{item.classes | join(' ')}}">
 				<a class="nav-link font--bold color--green text--uppercase letter--2" href="{{item.get_link}}">{{item.title}}</a>

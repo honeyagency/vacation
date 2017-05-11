@@ -1,18 +1,19 @@
-.spacing--vert-1 {padding-top:(1em);padding-bottom:(1em);}
-.spacing--vert-2 {padding-top:(2em);padding-bottom:(2em);}
-.spacing--vert-3 {padding-top:(3em);padding-bottom:(3em);}
-.spacing--vert-4 {padding-top:(4em);padding-bottom:(4em);}
-.spacing--vert-5 {padding-top:(5em);padding-bottom:(5em);}
-.spacing--vert-6 {padding-top:(6em);padding-bottom:(6em);}
+.spacing--vert-1 {padding-top:($mobile-spacing * 1);padding-bottom:($mobile-spacing * 1);}
+.spacing--vert-2 {padding-top:($mobile-spacing * 2);padding-bottom:($mobile-spacing * 2);}
+.spacing--vert-3 {padding-top:($mobile-spacing * 3);padding-bottom:($mobile-spacing * 3);}
+.spacing--vert-4 {padding-top:($mobile-spacing * 4);padding-bottom:($mobile-spacing * 4);}
+.spacing--vert-5 {padding-top:($mobile-spacing * 5);padding-bottom:($mobile-spacing * 5);}
+.spacing--vert-6 {padding-top:($mobile-spacing * 6);padding-bottom:($mobile-spacing * 6);}
 
 
-.spacing--horiz-1 {padding-left:(1em);padding-right:(1em);}
-.spacing--horiz-2 {padding-left:(2em);padding-right:(2em);}
-.spacing--horiz-3 {padding-left:(3em);padding-right:(3em);}
-.spacing--horiz-4 {padding-left:(4em);padding-right:(4em);}
-.spacing--horiz-5 {padding-left:(5em);padding-right:(5em);}
-.spacing--horiz-6 {padding-left:(6em);padding-right:(6em);}
+.spacing--horiz-1 {padding-left:($mobile-spacing * 1);padding-right:($mobile-spacing * 1);}
+.spacing--horiz-2 {padding-left:($mobile-spacing * 2);padding-right:($mobile-spacing * 2);}
+.spacing--horiz-3 {padding-left:($mobile-spacing * 3);padding-right:($mobile-spacing * 3);}
+.spacing--horiz-4 {padding-left:($mobile-spacing * 4);padding-right:($mobile-spacing * 4);}
+.spacing--horiz-5 {padding-left:($mobile-spacing * 5);padding-right:($mobile-spacing * 5);}
+.spacing--horiz-6 {padding-left:($mobile-spacing * 6);padding-right:($mobile-spacing * 6);}
 
+.spacing--dsk-vert-0 {@include media( $screen-sm ){padding-top:(0);padding-bottom:(0);};}
 .spacing--dsk-vert-1 {@include media( $screen-sm ){padding-top:(1em);padding-bottom:(1em);};}
 .spacing--dsk-vert-2 {@include media( $screen-sm ){padding-top:(2em);padding-bottom:(2em);};}
 .spacing--dsk-vert-3 {@include media( $screen-sm ){padding-top:(3em);padding-bottom:(3em);};}
@@ -21,6 +22,7 @@
 .spacing--dsk-vert-6 {@include media( $screen-sm ){padding-top:(6em);padding-bottom:(6em);};}
 
 
+.spacing--dsk-horiz-0 {@include media( $screen-sm ){padding-left:(0);padding-right:(0);};}
 .spacing--dsk-horiz-1 {@include media( $screen-sm ){padding-left:(1em);padding-right:(1em);};}
 .spacing--dsk-horiz-2 {@include media( $screen-sm ){padding-left:(2em);padding-right:(2em);};}
 .spacing--dsk-horiz-3 {@include media( $screen-sm ){padding-left:(3em);padding-right:(3em);};}
@@ -31,14 +33,23 @@
 .spacing--bot-6{
 	padding-bottom: 6em;
 }
+
 .spacing--gutter{
 
-	padding-right:  10px;
-	padding-left: 10px;
+	padding-right:$mobile-spacing;
+	padding-left:$mobile-spacing;
 
 	@include media($screen-md) {
 		padding-left:2.5em;
 		padding-right:2.5em;
+	}
+	
+}
+.spacing--gutter-mob{
+
+	@include media($max-sm) {
+		padding-right:$mobile-spacing;
+		padding-left:$mobile-spacing;	
 	}
 	
 }

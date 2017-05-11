@@ -2,6 +2,12 @@
     display: flex;
 }
 
+.dsk--flex {
+    @include media($screen-sm) {
+        display: flex;
+    }
+}
+
 .flex--wrap {
     flex-wrap: wrap;
 }

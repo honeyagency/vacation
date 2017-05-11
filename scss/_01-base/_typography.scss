@@ -1,7 +1,13 @@
 body {
     font-family: $base-sans-font;
     line-height: $base-line-height;
-    font-size: 1rem;
+    font-size: $base-font-size * 1.1;
+
+    @include media($screen-sm) {
+        font-size: $base-font-size;
+    }
+
+
     color: $base-font-color;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
@@ -29,9 +35,16 @@ h1, h2, h3, h4, h5, h6 {
 $h1: 2.5 * $base-font-size;
 $h2: 1.075 * $base-font-size;
 $h3: 0.95 * $base-font-size;
-$h4: 0.9em;
+$h4: 0.9 * $base-font-size;
 $h5: 0.875 * $base-font-size;
 $h6: 0.7 * $base-font-size;
+
+$h1-mob: 2.5 * $base-font-size;
+$h2-mob: 1.075 * $base-font-size;
+$h3-mob: 0.95 * $base-font-size;
+$h4-mob: 0.9 * $base-font-size;
+$h5-mob: 0.875 * $base-font-size;
+$h6-mob: 0.7 * $base-font-size;
 
 h1 {
     font-size: $h1;
@@ -52,16 +65,19 @@ h3 {
 
 h4 {
     font-family: $base-sans-font;
-    font-size: $h4;
-    letter-spacing: 2px;
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    letter-spacing: 3px;
 }
 
 h5 {
+    font-family: $base-sans-font;
     font-size: $h5;
     letter-spacing: 2px;
 }
 
 h6 {
+    font-family: $base-sans-font;
     font-size: $h6;
     letter-spacing: 1.6px;
     margin-bottom: 0.5em;

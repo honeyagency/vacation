@@ -33,6 +33,12 @@ textarea {
     background-color: transparent;
     border: none;
     border-bottom: 5px solid map-get($gold, main);
+
+    @include media($max-sm) {
+        border-color: white;
+    }
+
+
     font-family: $heading-font-family;
     text-transform: uppercase;
     border-radius: 0;
@@ -193,4 +199,3 @@ select {
 .screenreaderonly {
     @include hide-visually;
 }
-

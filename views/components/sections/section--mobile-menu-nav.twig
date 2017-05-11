@@ -1,0 +1,35 @@
+{% if food %}
+	<nav class="section--mobile-menu-nav hidden--dsk bg--green spacing--vert-1">
+		<div>
+			{% if food|length > 2 %}<button class="previous" id="previousButton"><i class="icon-arrow-nopost" data-grunticon-embed></i></button>{% endif %}
+			<ul class="mobile--menu-navigation-track">
+				{% for food in food %}
+					<li class="block--mobile-menu-nav-item color--white text--center grid--half spacing--vert-1">
+						<img src="{{food.image|resize(200)}}" width="100">
+						<div>{{food.title}}</div>
+					</li>
+				{% endfor %}
+			</ul>
+			{% if food|length > 2 %}<button class="next" id="nextButton"><i class="icon-arrow-nopost" data-grunticon-embed></i></button>{% endif %}
+		</div>
+	</nav>
+{% endif %}
+{% if food %}
+	<section data-nav="menus" id="menus" class="section--menu hidden--dsk spacing--gutter has--nav">
+		<div class="block--menu-wrap bg--white">
+			<div class="gold-border mobile--menu">
+				{% for food in food %}
+					<div class="block--menu  grid--one">
+						<h5 id="menu-{{loop.index}}" class="color--green-light">{{food.title}}<hr class="five shift color--green-light"></h5>
+						<div class="spacing--vert-2">
+						{% for item in food.menu %}
+							<h4>{{item.item}}</h4>
+							<p class="font--thin">{{item.description}}</p>
+						{% endfor %}
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endif %}

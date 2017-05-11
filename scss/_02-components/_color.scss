@@ -25,3 +25,73 @@
 .color--white {
     color: $white;
 }
+
+i {
+    &.color--green {
+        svg {
+            path {
+                fill: map-get($green, main);
+            }
+        }
+    }
+}
+
+i {
+    &.color--green-light {
+        svg {
+            path {
+                fill: map-get($green, light);
+            }
+        }
+    }
+}
+
+i {
+    &.color--pink {
+        svg {
+            path {
+                fill: map-get($pink, main);
+            }
+        }
+    }
+}
+
+i {
+    &.color--pink-faded {
+        svg {
+            path {
+                fill: map-get($pink, faded);
+            }
+        }
+    }
+}
+
+i {
+    &.color--gold {
+        svg {
+            path {
+                fill: map-get($gold, main);
+            }
+        }
+    }
+}
+
+i {
+    &.color--black {
+        svg {
+            path {
+                fill: $black;
+            }
+        }
+    }
+}
+
+i {
+    &.color--white {
+        svg {
+            path {
+                fill: $white;
+            }
+        }
+    }
+}

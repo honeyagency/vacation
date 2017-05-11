@@ -1,3 +1,13 @@
+.icon-arrow-nopost { background-image: url('app/icons/arrow-nopost.png'); background-repeat: no-repeat; }
+
+.icon-arrow-right { background-image: url('app/icons/arrow-right.png'); background-repeat: no-repeat; }
+
+.icon-cocktail-illustration { background-image: url('app/icons/cocktail-illustration.png'); background-repeat: no-repeat; }
+
+.icon-deco { background-image: url('app/icons/deco.png'); background-repeat: no-repeat; }
+
+.icon-divider { background-image: url('app/icons/divider.png'); background-repeat: no-repeat; }
+
 .icon-gold-border-menu { background-image: url('app/icons/gold-border-menu.png'); background-repeat: no-repeat; }
 
 .icon-gold-border { background-image: url('app/icons/gold-border.png'); background-repeat: no-repeat; }
@@ -9,6 +19,8 @@
 .icon-menu-bg-icons { background-image: url('app/icons/menu-bg-icons.png'); background-repeat: no-repeat; }
 
 .icon-nav { background-image: url('app/icons/nav.png'); background-repeat: no-repeat; }
+
+.icon-plane-white { background-image: url('app/icons/plane-white.png'); background-repeat: no-repeat; }
 
 .icon-plane { background-image: url('app/icons/plane.png'); background-repeat: no-repeat; }
 

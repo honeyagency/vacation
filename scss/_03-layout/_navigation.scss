@@ -1,4 +1,4 @@
-nav {
+nav.navigation {
     ul {
         margin: 0;
 
@@ -9,27 +9,104 @@ nav {
             a {
                 position: relative;
 
-                &:after {
-                    content: ' ';
-                    display: block;
-                    position: absolute;
-                    width: 110%;
-                    background: map-get($pink, main);
-                    height: 3px;
-                    opacity: 0;
-                    bottom: 0;
-                    transform: translateX(-50%) translateY(50%) rotate(-2deg);
-                    left: 50%;
-                    transition: opacity 0.1s $base-cubic, bottom 0.1s $base-cubic;
-                    transition-delay: .05s;
+                // &:after {
+                //     content: ' ';
+                //     display: block;
+                //     position: absolute;
+                //     width: 110%;
+                //     background: map-get($pink, main);
+                //     height: 3px;
+                //     opacity: 0;
+                //     bottom: 0;
+                //     transform: translateX(-50%) translateY(50%) rotate(-2deg);
+                //     left: 50%;
+                //     transition: opacity 0.1s $base-cubic, bottom 0.1s $base-cubic;
+                //     transition-delay: .05s;
+                // }
+
+                // &:hover, &.current {
+                //     &:after {
+                //         transition: opacity 0.1s $base-cubic, bottom 0.1s $base-cubic;
+                //         opacity: 1;
+                //         bottom: 50%;
+                //     }
+                // }
+           
+            }
+        }
+    }
+
+    @include media($max-sm) {
+        border-radius: 8px;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        bottom: 0;
+        right: 0;
+        background-color: map-get($green, main);
+        text-align: center;
+        padding-top: 88px;
+        transition: top 0.3s $base-cubic;
+
+        ul {
+            li {
+                padding: 1em 0;
+                display: block;
+
+                a {
+                    color: white !important;
                 }
+            }
+        }
+    }
+}
 
-                &:hover, &.current {
-                    &:after {
+.icon-nav {
+    top: 12px;
+    tap-highlight: transparent;
+    -webkit-tap-highlight: transparent;
 
-                        transition: opacity 0.1s $base-cubic, bottom 0.1s $base-cubic;
-                        opacity: 1;
-                        bottom: 50%;
+    svg {
+        path {
+            transition: transform 0.3s $base-cubic;
+
+            &#TopPath {
+                transform-origin: top left !important;
+            }
+
+            &#BottomPath {
+                transform-origin: bottom left !important;
+            }
+        }
+    }
+}
+
+body {
+    @include media($max-sm) {
+        &.open {
+            position: fixed;
+
+            nav {
+                transition: top 0.2s $base-cubic;
+                top: 7px;
+            }
+
+            .icon-nav {
+                svg {
+                    path {
+                        transition: transform 0.2s $base-cubic;
+
+                        &#TopPath {
+                            transform-origin: top left !important;
+                            transform: translateX(4px) translateY(-3px) rotate(45deg);
+                        }
+
+                        &#BottomPath {
+                            transform-origin: bottom left !important;
+                            transform: translateX(4px) translateY(3px) rotate(-45deg);
+                        }
                     }
                 }
             }

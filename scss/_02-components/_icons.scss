@@ -1,9 +1,6 @@
 header {
     .icon-logo {
-        svg {
-            // height: 100px;
-       
-        }
+        svg {}
     }
 
     .icon-logo-horizontal {
@@ -16,5 +13,84 @@ header {
 .icon-nav {
     position: relative;
     z-index: 99999;
-    width: 50px;
+    width: 32px;
+    display: block;
+    float: right;
+}
+
+.icon-logo {
+    @include media($max-sm) {
+        width: 180px;
+        max-width: 80%;
+    }
+}
+
+.icon-gold-border {
+    @include media($max-sm) {
+        background: none !important;
+    }
+}
+
+.icon-deco {
+    width: 32px;
+    display: inline-block;
+
+    &.top {
+        &.right {
+            transform: rotate(90deg);
+            float: right;
+        }
+    }
+
+    &.bottom {
+        &.left {
+            transform: rotate(-90deg);
+        }
+
+        &.right {
+            transform: rotate(180deg);
+            float: right;
+        }
+    }
+
+    &.up {
+        transform: translateX(50%) translateY(50%) rotate(-135deg);
+        transform-origin: top left;
+    }
+
+    &.down {
+        transform: translateX(50%) translateY(-50%) rotate(45deg);
+        transform-origin: top left;
+        width: $mobile-spacing * 3;
+    }
+}
+
+.icon-cocktail-illustration {
+    width: $mobile-spacing * 3;
+
+    @include media($screen-sm) {
+        width: $mobile-spacing * 2;
+    }
+}
+
+.icon-divider {
+    width: 100px;
+
+    @include media($screen-xs) {}
+
+
+    @include media($screen-sm) {
+        width: 120px;
+    }
+
+
+    @include media($screen-md) {
+        width: 140px;
+    }
+
+
+    @include media($screen-lg) {}
+
+
+    @include media($screen-xl) {}
 }

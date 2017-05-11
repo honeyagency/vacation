@@ -5,8 +5,17 @@
     transform: translateY(-50%);
 }
 
+.vertical--center-dsk {
+    @include media($screen-sm) {
+        position: relative;
+        top: 50%;
+        display: block;
+        transform: translateY(-50%);
+    }
+}
+
 .block {
-    display: block;
+    display: block !important;
 }
 
 .margin--center {
