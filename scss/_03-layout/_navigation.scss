@@ -69,6 +69,7 @@ nav.navigation {
     -webkit-tap-highlight: transparent;
 
     svg {
+        overflow: visible;
         path {
             transition: transform 0.3s $base-cubic;
 
@@ -87,6 +88,7 @@ body {
     @include media($max-sm) {
         &.open {
             position: fixed;
+            width: 100%;
 
             nav {
                 transition: top 0.2s $base-cubic;

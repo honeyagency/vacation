@@ -1,26 +1,22 @@
 .section--home-hours {
-    
+    position: relative;
 
-    
-
-    @include media($screen-xs) {}
+    // @include media($screen-xs) {
+    //     background-size: 100% 100%;
+    //     height: calc(57vw - 5em);
+    //     width: calc(80vw - 5em);
+    // }
 
 
     @include media($screen-sm) {
-        background-size: 100% 100%;
-        height: calc(57vw - 5em);
+            background-size: 100% 100%;
+      height: calc(57vw - 5em);
         width: calc(80vw - 5em);
     }
 
 
-    @include media($screen-md) {
+    @include media($screen-lg) {
         height: calc(42vw - 5em);
         width: calc(60vw - 5em);
     }
-
-
-    @include media($screen-lg) {}
-
-
-    @include media($screen-xl) {}
 }

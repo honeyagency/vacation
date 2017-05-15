@@ -36,9 +36,12 @@ header {
     display: inline-block;
 
     &.top {
+        top: 5px;
+
         &.right {
             transform: rotate(90deg);
             float: right;
+            right: 0;
         }
     }
 
@@ -50,7 +53,10 @@ header {
         &.right {
             transform: rotate(180deg);
             float: right;
+            right: 0;
         }
+
+        bottom: 0;
     }
 
     &.up {
@@ -62,6 +68,21 @@ header {
         transform: translateX(50%) translateY(-50%) rotate(45deg);
         transform-origin: top left;
         width: $mobile-spacing * 3;
+    }
+
+    @include media($screen-sm) {
+        width: 35px;
+        position: absolute;
+        float: none;
+    }
+
+
+    @include media($screen-xl) {
+        &.top {
+            top: 10px;
+        }
+
+        width: 45px;
     }
 }
 

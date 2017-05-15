@@ -1,11 +1,12 @@
 {% if food %}
-	<section data-nav="menus" id="menus" class="hidden--mob section--menu spacing--gutter spacing--dsk-horiz-5 spacing--dsk-vert-4 has--nav">
-		<div class="block--menu-wrap bg--white spacing--dsk-vert-5 spacing--dsk-horiz-5 ">
+	<section data-nav="menus" id="menus" class="hidden--mob section--menu has--nav">
+		<div class="block--menu-wrap">
 			<div class="gold-border">
 				{% for food in food %}
-					<div class="block--menu grid--one grid--sm-two-fifths spacing--dsk-horiz-2 spacing--dsk-vert-6" >
+					{% if loop.first %}
+					<div class="block--menu">
 					{# 	<h5 id="menu-{{loop.index}}" class="color--green-light">{{food.title}}<hr class="five shift color--green-light"></h5> #}
-						<div class="spacing--vert-2">
+						<div class="">
 						{% for item in food.menu %}
 							<h4>{{item.item}}</h4>
 							<h6 class="font--rn color--gold transform--no">{{item.subtitle}}</h6>
@@ -13,6 +14,7 @@
 						{% endfor %}
 						</div>
 					</div>
+				{% endif %}
 				{% endfor %}
 			</div>
 		</div>

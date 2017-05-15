@@ -83,6 +83,12 @@
 .font--sans {
     font-family: $default-font;
 }
-.transform--no{
+
+.transform--no {
     text-transform: none !important;
+}
+
+.column--2 {
+    column-count: 2;
+    column-gap: 1em;
 }

@@ -59,12 +59,16 @@ function buscemi_scripts()
         wp_register_script('livereload', $reloadScript, null, false, true);
         wp_enqueue_script('livereload');
     }
-
+      wp_register_script('picturefill', get_template_directory_uri() . '/app/vendors/picturefill.min.js', null, null, null, true);
+    wp_enqueue_script('picturefill');
+    wp_register_script('lazy', get_template_directory_uri() . '/app/vendors/lazyload.min.js', null, null, null, true);
+    wp_enqueue_script('lazy');
     wp_enqueue_style('buscemi_style', get_template_directory_uri() . '/app/main.min.css', null, null, null);
     wp_enqueue_script('buscemi_script', get_template_directory_uri() . '/app/app.min.js', array('jquery'), null, null, true);
 
     wp_register_script('slick', get_template_directory_uri() . '/app/vendors/slick.min.js', array('jquery'), null, null, true);
     wp_enqueue_script('slick');
+
 }
 add_action('wp_enqueue_scripts', 'buscemi_scripts');
 

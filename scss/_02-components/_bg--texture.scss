@@ -2,6 +2,12 @@
     // background-image: url("./images/bg-text.jpg");
     background-image: url("./images/bg--texture.png");
     background-repeat: repeat;
+
     // background-size: 401px;
     background-size: 111px;
+
+    @include media($screen-sm) {
+        background-size: 100%;
+        background-image: url("./images/bg--texture-dsk.jpg");
+    }
 }

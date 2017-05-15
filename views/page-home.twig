@@ -9,11 +9,14 @@
 		{% include 'components/sections/section--home-hours.twig' %}
 		{% include 'components/sections/section--home-description.twig' %}
 	</section>
-
 	{# {% include 'components/sections/section--video.twig' %} #}
 	{% include 'components/sections/section--mobile-menu-nav.twig' %}
 	{% include 'components/sections/section--menu.twig' %}
 	<section class="bg--texture">
+		{% if home.about.title %}
+			{% include 'components/sections/section--home-about.twig' %}
+		{% endif %}
 		{% include 'components/sections/section--image-grid.twig' %}
+		{% include 'components/sections/section--mobile-slider.twig' %}
 	</section>
 {% endblock %}

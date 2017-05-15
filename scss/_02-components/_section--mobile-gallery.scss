@@ -1,0 +1,60 @@
+$active-background: map-get($green, main);
+$inactive-background: transparentize(white, 0.4);
+
+.section--mobile-gallery {
+    ul {
+        @extend .spacing--gutter;
+
+        @include media($max-sm) {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            top: -50px;
+            position: relative;
+
+            li {
+                margin: 0;
+
+                button {
+                    appearance: none;
+                    background: $inactive-background;
+                    border: 0;
+                    color: transparent;
+                    height: 5px;
+                    width: calc(100vw / 4 - 24px);
+                    border-radius: 2px;
+                    background: linear-gradient(to right, $active-background 0%, $active-background 50%, $inactive-background 50%, $inactive-background 100%);
+                    background-size: 200%;
+					background-position-x: 100%;
+                    // background-image: linear-gradient(to right, $inactive-background 0%, $inactive-background 100%);
+               
+                }
+
+                &.slick-active {
+                    button {
+                        animation-name: slider;
+                        animation-duration: 3090ms;
+                        animation-fill-mode: forwards;
+                        animation-timing-function: linear;
+                        transform: translate3d(0, 0, 0);
+                        -webkit-transform: translate3d(0, 0, 0);
+                        will-change: background-position-x;
+                        -webkit-will-change: background-position-x;
+                        -webkit-backface-visibility: hidden;
+                        -webkit-perspective: 1000;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes slider {
+    from {
+        background-position-x: 100%;
+    }
+
+    to {
+        background-position-x: 0%;
+    }
+}

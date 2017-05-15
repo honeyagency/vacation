@@ -18,7 +18,7 @@ jQuery(document).ready(function($) {
                 slidesToShow: 1,
                 speed: 200,
                 swipe: false,
-                adaptiveHeight:true
+                adaptiveHeight: true
             });
             $('.mobile--menu-navigation-track').slick({
                 asNavFor: '.mobile--menu',
@@ -32,11 +32,24 @@ jQuery(document).ready(function($) {
                 slidesToScroll: 1,
                 slidesToShow: 1,
                 swipe: true,
-                swipeToSlide:true,
+                swipeToSlide: true,
                 speed: 200,
-
                 prevArrow: $prev,
                 nextArrow: $next
+            });
+            $('.mobile--slider').slick({
+                arrows: false,
+                dots: true,
+                focusOnSelect: false,
+                infinite: true,
+                cssEase: 'ease-in-out',
+                speed: 600,
+                mobileFirst: true,
+                slidesToScroll: 1,
+                slidesToShow: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                adaptiveHeight: true
             });
         }
     }

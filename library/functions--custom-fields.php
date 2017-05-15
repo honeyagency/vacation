@@ -38,12 +38,16 @@ function prepareHomePageFields()
     } else {
         $homeGallery = null;
     }
-
+    $about = array(
+        'title' => get_field('field_591619d4a8c0d'),
+        'text'  => get_field('field_591619daa8c0e'),
+    );
     $section = array(
         'email'       => $email,
         'hours'       => $hours,
         'description' => get_field('field_59137a9985eb2'),
         'food'        => $menus,
+        'about'       => $about,
         'gallery'     => $homeGallery,
     );
     return $section;
