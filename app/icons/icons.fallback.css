@@ -2,7 +2,19 @@
 
 .icon-arrow-right { background-image: url('app/icons/arrow-right.png'); background-repeat: no-repeat; }
 
+.icon-border-bottom-01 { background-image: url('app/icons/border-bottom-01.png'); background-repeat: no-repeat; }
+
+.icon-border-bottom { background-image: url('app/icons/border-bottom.png'); background-repeat: no-repeat; }
+
+.icon-border-top-2 { background-image: url('app/icons/border-top-2.png'); background-repeat: no-repeat; }
+
+.icon-border-top { background-image: url('app/icons/border-top.png'); background-repeat: no-repeat; }
+
 .icon-cocktail-illustration { background-image: url('app/icons/cocktail-illustration.png'); background-repeat: no-repeat; }
+
+.icon-deco-bg-01 { background-image: url('app/icons/deco-bg-01.png'); background-repeat: no-repeat; }
+
+.icon-deco-bg { background-image: url('app/icons/deco-bg.png'); background-repeat: no-repeat; }
 
 .icon-deco { background-image: url('app/icons/deco.png'); background-repeat: no-repeat; }
 

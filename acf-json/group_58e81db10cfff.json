@@ -49,7 +49,31 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_591c97e16077b",
+                    "label": "Image (Menu Title)",
+                    "name": "image_menu_title",
+                    "type": "image",
+                    "instructions": "This'll probs just be an image of a hand-written menu title.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -106,25 +130,6 @@
                             "key": "field_58e81869b4294",
                             "label": "Item",
                             "name": "item",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5914eabc1e13a",
-                            "label": "Sub Title",
-                            "name": "sub_title",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -200,5 +205,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1494543229
+    "modified": 1495046162
 }

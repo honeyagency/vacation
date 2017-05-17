@@ -102,20 +102,26 @@ function prepareRestaurantMenus()
 
                     $menu[] = array(
                         'item'        => get_sub_field('field_58e81869b4294', 'options'),
-                        'subtitle'    => get_sub_field('field_5914eabc1e13a', 'options'),
                         'description' => get_sub_field('field_58e8186eb4295', 'options'),
                         'price'       => get_sub_field('field_58ed14ca4aeeb', 'options'),
                     );
                 }
-                $imageId = get_sub_field('field_5914a72c78924', 'options');
-                if (!empty($imageId)) {
-                    $image = new TimberImage($imageId);
+                $mobileImageId = get_sub_field('field_5914a72c78924', 'options');
+                if (!empty($mobileImageId)) {
+                    $mobileImage = new TimberImage($mobileImageId);
                 } else {
-                    $image = null;
+                    $mobileImage = null;
+                }
+                $menuImageId = get_sub_field('field_591c97e16077b', 'options');
+                if (!empty($menuImageId)) {
+                    $menuImage = new TimberImage($menuImageId);
+                } else {
+                    $menuImage = null;
                 }
                 $menus[] = array(
                     'title'       => get_sub_field('field_58e81852e57b8', 'options'),
-                    'image'       => $image,
+                    'mobileimage' => $mobileImage,
+                    'menuimage'   => $menuImage,
                     'description' => get_sub_field('field_58e81857e57b9', 'options'),
                     'menu'        => $menu,
                 );

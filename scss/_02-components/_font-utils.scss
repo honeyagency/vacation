@@ -28,7 +28,8 @@
 
 .font--largest {
     @include media($screen-sm) {
-        font-size: 1.4em;
+        font-size: 1.2em;
+        line-height: 1.8;
     }
 }
 
@@ -89,6 +90,8 @@
 }
 
 .column--2 {
-    column-count: 2;
-    column-gap: 1em;
+    @include media($screen-sm) {
+        column-count: 2;
+        column-gap: 2em;
+    }
 }

@@ -5,7 +5,7 @@
 			<ul class="mobile--menu-navigation-track">
 				{% for food in food %}
 					<li class="block--mobile-menu-nav-item color--white text--center grid--half spacing--vert-1">
-						<img src="{{food.image|resize(200)}}" width="100">
+						<img src="{{food.mobileimage|resize(200)}}" width="100">
 						<div>{{food.title}}</div>
 					</li>
 				{% endfor %}

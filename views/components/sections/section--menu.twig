@@ -1,21 +1,26 @@
 {% if food %}
-	<section data-nav="menus" id="menus" class="hidden--mob section--menu has--nav">
+	<section data-nav="menus" id="menus" class="hidden--mob section--menu spacing--vert-5 has--nav">
 		<div class="block--menu-wrap">
 			<div class="gold-border">
-				{% for food in food %}
-					{% if loop.first %}
-					<div class="block--menu">
-					{# 	<h5 id="menu-{{loop.index}}" class="color--green-light">{{food.title}}<hr class="five shift color--green-light"></h5> #}
-						<div class="">
-						{% for item in food.menu %}
-							<h4>{{item.item}}</h4>
-							<h6 class="font--rn color--gold transform--no">{{item.subtitle}}</h6>
-							<p class="font--thin">{{item.description}}</p>
+				<div class="icon-border-top"></div>
+				
+				<div class="menu-background">
+					<div class="menu-border">
+						{% for food in food %}
+							{% if loop.first %}
+								<img src="{{food.menuimage|resize(400)}}" width="200" class="menu-title-image">
+								<div class="block--menu spacing--horiz-2">
+									{% for item in food.menu %}
+										<h4>{{item.item}}</h4>
+										<p class="font--thin">{{item.description}}</p>
+									{% endfor %}
+								</div>
+							{% endif %}
 						{% endfor %}
-						</div>
 					</div>
-				{% endif %}
-				{% endfor %}
+				</div>
+				<div class="icon-border-top flip"></div>
+				<i class="icon-divider margin--center hidden--mob" data-grunticon-embed></i><br>
 			</div>
 		</div>
 	</section>
