@@ -1,4 +1,10 @@
-<section class="section--home-about spacing--gutter spacing--dsk-vert-6 grid--three-fourths margin--center">
-	{% if home.about.title %}<h3 class="text--center font--sans letter--2">{{home.about.title}}</h3>{% endif %}
-	{% if home.about.text %}<div class="column--2 font--largest font--thin">{{home.about.text}}</div>{% endif %}
+<section class="section--home-about spacing--gutter spacing--dsk-vert-5 grid--three-fourths margin--center">
+	{% if home.about.title %}<h3 class="text--center font--sans">{{home.about.title}}
+		<div class="divider-bg hidden-mob">
+		<i class="icon-divider" data-grunticon-embed></i>
+		<i class="icon-divider" data-grunticon-embed></i>
+		<i class="icon-divider" data-grunticon-embed></i>
+	</div>
+	</h3>{% endif %}
+	{% if home.about.text %}<div class="column--2 font--largest font--thin spacing--dsk-vert-4">{{home.about.text}}</div>{% endif %}
 </section>

@@ -1,1 +1,27 @@
-Copyright {{"now"|date('Y')}}
+<footer class="section--footer bg--texture">
+	<section class="spacing--gutter flex flex--wrap max-wrap justify--around margin--center">
+		<div class="">
+			<i class="icon-logo-footer" data-grunticon-embed></i>
+		</div>
+		<div class="grid--one grid--sm-fourth">
+			{% if home.hours %}
+				{% for hours in home.hours %}
+					<div>
+						<span>{{hours.days}}</span>
+						<span>{{hours.hours}}</span>
+					</div>
+				{% endfor %}
+			{% endif %}
+		</div>
+		<div class="grid--one grid--sm-fifth">
+			<span>{{options.address.street}}</span><br>
+			<span>{{options.address.city}}</span>
+			<span>{{options.address.state}} {{options.address.zip}}</span>
+		</div>
+		<div class="grid--one grid--sm-fourth">{% include 'components/blocks/block--home-email-form.twig' %}</div>
+		
+	</section>
+	<section class="section--sub-footer grid--one">
+		Copyright {{"now"|date('Y')}}
+	</section>
+</footer>

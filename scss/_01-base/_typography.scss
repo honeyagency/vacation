@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 // mobile
 $h1: 2.5 * $base-font-size;
 $h2: 1.075 * $base-font-size;
-$h3: 0.95 * $base-font-size;
+$h3: 0.91 * $base-font-size;
 $h4: 0.9 * $base-font-size;
 $h5: 0.8 * $base-font-size;
 $h6: 0.7 * $base-font-size;
@@ -94,6 +94,7 @@ h6 {
 
     h3 {
         font-size: $h3 * 1.25;
+        letter-spacing: 4.5px;
     }
 
     h4 {

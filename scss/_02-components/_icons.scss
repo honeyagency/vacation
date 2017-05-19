@@ -74,6 +74,10 @@ header {
         width: 35px;
         position: absolute;
         float: none;
+
+        &.relative {
+            position: relative;
+        }
     }
 
 
@@ -90,7 +94,7 @@ header {
     width: $mobile-spacing * 3;
 
     @include media($screen-sm) {
-        width: $mobile-spacing * 2;
+        width: $mobile-spacing * 4;
     }
 }
 

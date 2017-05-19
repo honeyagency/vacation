@@ -41,6 +41,12 @@
     font-size: .8em;
 }
 
+.font--dsk-larger {
+    @include media($screen-sm) {
+        font-size: 1.4em;
+    }
+}
+
 .text--center {
     text-align: center !important;
 }

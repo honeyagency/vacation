@@ -1,0 +1,26 @@
+.section--home-about {
+    @include media($screen-sm) {
+        padding-top: 10em !important;
+    }
+
+
+    h3 {
+        display: table;
+        margin: 0 auto;
+        position: relative;
+        z-index: 9;
+
+        .divider-bg {
+            position: absolute;
+            width: 140px;
+            right: -40%;
+            z-index: -2;
+            top: -50%;
+            transform: translateX(-50%);
+
+            i {
+                width: 100%;
+            }
+        }
+    }
+}
