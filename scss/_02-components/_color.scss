@@ -26,6 +26,20 @@
     color: $white;
 }
 
+.color--gray {
+    color: $gray;
+}
+
+.hover--pink {
+    transition: color 0.2s $base-cubic;
+
+    &:hover {
+        transition: color 0.2s $base-cubic;
+
+        @extend .color--pink-faded;
+    }
+}
+
 i {
     &.color--green {
         svg {

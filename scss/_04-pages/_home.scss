@@ -1,3 +1,6 @@
+$timing: 0.9s;
+$delay: 1s;
+
 .icon-logo {
     svg {
         // width: 80vw;
@@ -11,7 +14,8 @@
             stroke: #fff;
             stroke-dasharray: 1000;
             stroke-dashoffset: -1000;
-            animation-duration: 1s;
+            stroke-linecap: round;
+            animation-duration: 1.5 * $timing;
             animation-fill-mode: forwards;
             animation-timing-function: $base-cubic;
             fill: transparent;
@@ -20,106 +24,118 @@
 
         // &:nth-of-type(1) {
         //     path {
-        //         animation-duration: 1.32s;
+        //         animation-duration: 1.3 * $timing;
 
         //     }
         // }
 
         &:nth-of-type(2) {
             path {
-                animation-duration: 1.5s;
+                animation-delay: 0.5 * $delay;
+                animation-duration: 1.75 * $timing;
 
-                // &:nth-of-type(2) {
-                //     animation-duration: 1.46s;
-                // }
-           
+                &:nth-of-type(2) {
+                    animation-delay: 0.7 * $delay;
+                }
             }
         }
 
         &:nth-of-type(3) {
             path {
-                animation-duration: 1.50s;
+                animation-delay: 0.8 * $delay;
+                animation-duration: 1.5 * $timing;
             }
         }
 
         &:nth-of-type(4) {
             path {
-                animation-duration: 1.68s;
+                animation-delay: 0.9 * $delay;
+                animation-duration: 1.5 * $timing;
+
+                &:nth-of-type(2) {
+                    animation-delay: 1.1 * $delay;
+                }
             }
         }
 
         &:nth-of-type(5) {
             path {
-                animation-duration: 1.80s;
+                animation-delay: 0.9 * $delay;
+                animation-duration: 1.5 * $timing;
             }
         }
 
         &:nth-of-type(6) {
             path {
-                animation-duration: 1.92s;
+                animation-delay: 1 * $delay;
+                animation-duration: 1.5 * $timing;
             }
         }
 
         &:nth-of-type(7) {
             path {
-                animation-duration: 2.04s;
+                animation-delay: 1.1 * $delay;
+                animation-duration: 1.2 * $timing;
             }
         }
 
         &:nth-of-type(8) {
             path {
-                animation-duration: 2.28s;
+                animation-delay: 1.2 * $delay;
+                animation-duration: 1.3 * $timing;
 
                 &:nth-of-type(2) {
-                    animation-duration: 2.16s;
+                    animation-delay: 1.3 * $delay;
                 }
             }
         }
 
         &:nth-of-type(9) {
             path {
-                animation-duration: 2.40s;
+                animation-delay: 1.3 * $delay;
+                animation-duration: 1.5 * $timing;
             }
         }
 
         &:nth-of-type(10) {
             path {
-                animation-duration: 2.5s;
+                animation-delay: 1.3 * $delay;
+                animation-duration: 1.2 * $timing;
             }
         }
     }
 
-    #santa, #ana {
-        animation-duration: 2s;
-        animation-delay: 1s;
+    [data-name="santa"], [data-name="ana"] {
+        animation-delay: 1 * $delay;
+        animation-duration: 1 * $timing;
         animation-fill-mode: forwards;
         animation-timing-function: $base-cubic;
         opacity: 0;
     }
 
-    #santa {
+    [data-name="santa"] {
         animation-name: letters;
     }
 
-    #ana {
+    [data-name="ana"] {
         animation-name: letters-taller;
     }
 }
 
 @keyframes dash {
     from {
-        stroke-dashoffset: -1000;
+        stroke-dasharray: 1000;
     }
 
     to {
-        stroke-dashoffset: 0;
+        stroke-dasharray: 840;
     }
 }
 
 @keyframes letters {
     0% {
         opacity: 0;
-        transform: translate(1.91px, 20px);
+        transform: translateY(30px);
     }
 
     30% {
@@ -128,14 +144,14 @@
 
     100% {
         opacity: 1;
-        transform: translate(1.91px, 1.62px);
+        transform: translateY(0);
     }
 }
 
 @keyframes letters-taller {
     0% {
         opacity: 0;
-        transform: translate(1.91px, 45px);
+        transform: translateY(60px);
     }
 
     30% {
@@ -144,6 +160,6 @@
 
     100% {
         opacity: 1;
-        transform: translate(1.91px, 1.62px);
+        transform: translateY(0);
     }
 }

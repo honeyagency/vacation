@@ -17,11 +17,14 @@
 			<span>{{options.address.street}}</span><br>
 			<span>{{options.address.city}}</span>
 			<span>{{options.address.state}} {{options.address.zip}}</span>
+			{% include 'components/blocks/block--social.twig' %}
 		</div>
-		<div class="grid--one grid--sm-fourth">{% include 'components/blocks/block--home-email-form.twig' %}</div>
+		<div class="grid--one grid--sm-fourth grid--md-fifth">
+			Sign up for updates:<br>
+			{% include 'components/blocks/block--home-email-form.twig' %}</div>
 		
 	</section>
-	<section class="section--sub-footer grid--one">
-		Copyright {{"now"|date('Y')}}
+	<section class="section--sub-footer grid--one text--center color--gray font--rn font--even-smaller spacing--vert-1">
+		&copy; {{"now"|date('Y')}} Vacation Bar <span class="spacing--horiz-1">|</span> All Rights Reserved <span class="spacing--horiz-1">|</span> Website Design by <a target="_blank" class="color--gray hover--pink" href="https://honeyagency.com/?ref=vacation">Honey Agency</a>
 	</section>
 </footer>

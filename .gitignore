@@ -21,3 +21,4 @@ wp-content/plugins/hello.php
 *.scssc
 node_modules/
 node_modules
+.sass-cache
