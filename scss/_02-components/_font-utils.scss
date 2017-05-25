@@ -51,6 +51,12 @@
     text-align: center !important;
 }
 
+.text--dsk-center {
+    @include media($screen-sm) {
+        text-align: center !important;
+    }
+}
+
 .text--right {
     text-align: right !important;
 }

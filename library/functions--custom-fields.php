@@ -19,16 +19,7 @@ function prepareHomePageFields()
         'title'       => get_field('field_58a785bf9d01f'),
         'description' => get_field('field_58a785d29d020'),
     );
-    if (have_rows('field_58f10c28ccfb6')) {
-        $hours = array();
-        while (have_rows('field_58f10c28ccfb6')) {
-            the_row();
-            $hours[] = array(
-                'days'  => get_sub_field('field_58f10c48ccfb7'),
-                'hours' => get_sub_field('field_58f10c54ccfb8'),
-            );
-        }
-    }
+
     $homeGaleryArray = get_field('field_58f647f3f5147');
 
     if (!empty($homeGaleryArray)) {
@@ -78,12 +69,23 @@ function prepareOptionsPage()
             );
         }
     }
+    if (have_rows('field_59272d7b379c7', 'option')) {
+        $prettyhours = array();
+        while (have_rows('field_59272d7b379c7', 'option')) {
+            the_row();
+            $prettyhours[] = array(
+                'days'  => get_sub_field('field_59272d82379c8', 'options'),
+                'hours' => get_sub_field('field_59272d86379c9', 'options'),
+            );
+        }
+    }
     $section = array(
         'image'        => $image,
         'address'      => $address,
         'phone_number' => get_field('field_58e80f2fae445', 'options'),
         'pricerange'   => get_field('field_58ed166416862', 'options'),
         'hours'        => $hours,
+        'prettyhours'  => $prettyhours,
     );
 
     return $section;

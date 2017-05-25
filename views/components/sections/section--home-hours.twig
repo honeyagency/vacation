@@ -2,10 +2,10 @@
 	<i class="icon-deco top left" data-grunticon-embed></i>
 	<i class="icon-deco top right" data-grunticon-embed></i>
 	<div class="vertical--center-dsk text--center spacing--vert-2 spacing--dsk-vert-0">
-		{% if home.hours %}
+		{% if options.prettyhours %}
 			<div>
 				<h3 class="font--sans margin--vert-1">Open</h3>
-				{% for hours in home.hours %}
+				{% for hours in options.prettyhours %}
 					<div class="font--largest letter--1">
 						<span>{{hours.days}}</span>
 						<span>{{hours.hours}}</span>

@@ -1,7 +1,11 @@
 .section--image-grid {
     position: relative;
     overflow: hidden;
-    min-height: 100vh;
+
+    @include media($screen-sm) {
+        min-height: 100vh;
+    }
+
 
     img {
         width: 100%;

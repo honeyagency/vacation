@@ -29,3 +29,10 @@
 .margin--dsk-horiz-4 {@include media( $screen-sm ){margin-left:(4em);margin-right:(4em);};}
 .margin--dsk-horiz-5 {@include media( $screen-sm ){margin-left:(5em);margin-right:(5em);};}
 .margin--dsk-horiz-6 {@include media( $screen-sm ){margin-left:(6em);margin-right:(6em);};}
+
+.margin--bot-1 {margin-bottom:($mobile-spacing * 1);}
+.margin--bot-2 {margin-bottom:($mobile-spacing * 2);}
+.margin--bot-3 {margin-bottom:($mobile-spacing * 3);}
+.margin--bot-4 {margin-bottom:($mobile-spacing * 4);}
+.margin--bot-5 {margin-bottom:($mobile-spacing * 5);}
+.margin--bot-6 {margin-bottom:($mobile-spacing * 6);}

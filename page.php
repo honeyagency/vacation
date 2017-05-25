@@ -27,5 +27,7 @@ $context['post'] = $post;
 if (is_page('home')) {
     $context['home'] = prepareHomePageFields();
 }
+$field = get_field('field_59272bf2d6e0d', 'options');
+print_r($field);
 
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);

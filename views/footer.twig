@@ -1,11 +1,12 @@
-<footer class="section--footer bg--texture">
-	<section class="spacing--gutter flex flex--wrap max-wrap justify--around margin--center">
-		<div class="">
+<footer class="section--footer bg--white spacing--vert-1 spacing--dsk-vert-3">
+
+	<section class="spacing--gutter dsk--flex flex--wrap max-wrap justify--around margin--center">
+		<div class="hidden--mob">
 			<i class="icon-logo-footer" data-grunticon-embed></i>
 		</div>
-		<div class="grid--one grid--sm-fourth">
-			{% if home.hours %}
-				{% for hours in home.hours %}
+		<div class="grid--one grid--sm-fourth margin--bot-1">
+			{% if options.prettyhours %}
+				{% for hours in options.prettyhours %}
 					<div>
 						<span>{{hours.days}}</span>
 						<span>{{hours.hours}}</span>
@@ -19,12 +20,12 @@
 			<span>{{options.address.state}} {{options.address.zip}}</span>
 			{% include 'components/blocks/block--social.twig' %}
 		</div>
-		<div class="grid--one grid--sm-fourth grid--md-fifth">
+		<div class="grid--one grid--sm-fourth grid--md-fifth hidden--mob">
 			Sign up for updates:<br>
 			{% include 'components/blocks/block--home-email-form.twig' %}</div>
 		
 	</section>
-	<section class="section--sub-footer grid--one text--center color--gray font--rn font--even-smaller spacing--vert-1">
-		&copy; {{"now"|date('Y')}} Vacation Bar <span class="spacing--horiz-1">|</span> All Rights Reserved <span class="spacing--horiz-1">|</span> Website Design by <a target="_blank" class="color--gray hover--pink" href="https://honeyagency.com/?ref=vacation">Honey Agency</a>
+	<section class="section--sub-footer grid--one text--dsk-center color--gray font--rn font--even-smaller spacing--vert-1 spacing--gutter-mob">
+		&copy; {{"now"|date('Y')}} Vacation Bar <br class="hidden--dsk" /><span class="spacing--horiz-1 hidden--mob">|</span> All Rights Reserved <br class="hidden--dsk" /><span class="spacing--horiz-1 hidden--mob">|</span> Website Design by <a target="_blank" class="color--gray hover--pink" href="https://honeyagency.com/?ref=vacation">Honey Agency</a>
 	</section>
 </footer>

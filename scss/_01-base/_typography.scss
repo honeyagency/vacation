@@ -56,6 +56,10 @@ h1 {
 h2 {
     font-size: $h2;
     letter-spacing: 1.7px;
+
+    + p {
+        margin-top: 0.7em;
+    }
 }
 
 h3 {

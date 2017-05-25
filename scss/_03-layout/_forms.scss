@@ -25,56 +25,125 @@ textarea {
     font-size: 0.9em;
 }
 
+.mc-field-group {
+    #{$all-text-inputs} {
+        color: $black;
+        appearance: none;
+        -webkit-appearance: none;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 5px solid map-get($gold, main);
+
+        @include media($max-sm) {
+            border-color: white;
+        }
+
+
+        font-family: $heading-font-family;
+        text-transform: uppercase;
+        border-radius: 0;
+        transform: skewY(-1deg);
+        box-shadow: none;
+        box-sizing: border-box;
+        transition: border-color .3s ease-in-out;
+        margin-bottom: 1em;
+        padding: 6px 9px;
+        font-size: 0.9em;
+
+        // &:hover {
+        //     border-color: darken(map-get($brown, main), 10%);
+        // }
+
+        &:focus {
+            box-shadow: 0;
+            outline: none;
+        }
+
+        &::-webkit-input-placeholder {
+            color: map-get($gold, main);
+        }
+
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            color: map-get($gold, main);
+        }
+
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            color: map-get($gold, main);
+        }
+
+        &:-ms-input-placeholder {
+            color: map-get($gold, main);
+        }
+    }
+}
+
 #{$all-text-inputs} {
     color: $black;
     appearance: none;
     -webkit-appearance: none;
     width: 100%;
     background-color: transparent;
-    border: none;
-    border-bottom: 5px solid map-get($gold, main);
+    border: 1px solid;
 
-    @include media($max-sm) {
-        border-color: white;
-    }
-
-
-    font-family: $heading-font-family;
-    text-transform: uppercase;
+    // font-family: $san;
+    // text-transform: uppercase;
     border-radius: 0;
-    transform: skewY(-1deg);
+    border-color: $gray;
     box-shadow: none;
     box-sizing: border-box;
     transition: border-color .3s ease-in-out;
-    margin-bottom: 1em;
-    padding: 6px 9px;
+    margin-bottom: 20px;
+    padding: 10px;
     font-size: 0.9em;
 
     // &:hover {
     //     border-color: darken(map-get($brown, main), 10%);
     // }
 
-    &:focus {
-        box-shadow: 0;
-        outline: none;
-    }
-
     &::-webkit-input-placeholder {
-        color: map-get($gold, main);
+        color: map-get($green, light);
     }
 
     &:-moz-placeholder {
         /* Firefox 18- */
-        color: map-get($gold, main);
+        color: map-get($green, light);
     }
 
     &::-moz-placeholder {
         /* Firefox 19+ */
-        color: map-get($gold, main);
+        color: map-get($green, light);
     }
 
     &:-ms-input-placeholder {
-        color: map-get($gold, main);
+        color: map-get($green, light);
+    }
+
+    &:focus {
+        box-shadow: 0;
+        outline: none;
+        transition: border-color .3s ease-in-out;
+        border-color: darken($gray, 30%);
+
+        &::-webkit-input-placeholder {
+            color: map-get($green, main);
+        }
+
+        &:-moz-placeholder {
+            /* Firefox 18- */
+            color: map-get($green, main);
+        }
+
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            color: map-get($green, main);
+        }
+
+        &:-ms-input-placeholder {
+            color: map-get($green, main);
+        }
     }
 }
 
@@ -142,7 +211,7 @@ select {
     display: table !important;
     border: 0 !important;
     margin: 0 !important;
-    background-color: darken(map-get($pink, main), 10%) !important;
+    background-color: map-get($pink, main);
     color: white;
     text-align: center;
     padding: 1em !important;
@@ -150,12 +219,12 @@ select {
 }
 
 .wpcf7-not-valid-tip {
-    background-color: darken(map-get($pink, main), 10%);
+    background-color: map-get($pink, main);
     color: white !important;
-    margin-top: -16px;
+    margin-top: -21px;
     margin-bottom: 0.8em;
     padding: 6px 9px;
-    border: 1px solid $black;
+    border: 1px solid map-get($pink, main);
     border-top: none;
     font-size: 0.9em !important;
 }

@@ -1,12 +1,13 @@
 {% extends "base.twig" %}
-
 {% block content %}
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="article-content">
-				<h1 class="article-h1">{{post.title}}</h1>
-
-					{{post.content}}
-
-			</section>
-		</article>
+	<header class="spacing--vert-6 bg--image spacing--gutter text--center" style="background-image:url('{{header.image|resize(1440,720)}}');">
+		
+		<h1 class="article-h1 color--white font--sans">{{post.title}}</h1>
+		
+	</header>
+	<article class="post-type-{{post.post_type}} spacing--vert-4" id="post-{{post.ID}}">
+		<section class="article-content spacing--gutter">
+			{{post.content}}
+		</section>
+	</article>
 {% endblock %}
