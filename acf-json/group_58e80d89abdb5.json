@@ -140,6 +140,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_592761fdd75b1",
+            "label": "Contact Email",
+            "name": "contact_email",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_58f0fc2c25c6d",
             "label": "Restaurant Details",
             "name": "",
@@ -350,5 +369,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1495739885
+    "modified": 1495753232
 }

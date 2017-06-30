@@ -83,6 +83,7 @@ function prepareOptionsPage()
         'image'        => $image,
         'address'      => $address,
         'phone_number' => get_field('field_58e80f2fae445', 'options'),
+        'email'        => get_field('field_592761fdd75b1', 'options'),
         'pricerange'   => get_field('field_58ed166416862', 'options'),
         'hours'        => $hours,
         'prettyhours'  => $prettyhours,
