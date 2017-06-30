@@ -1,5 +1,8 @@
 {% if food %}
+	
+	
 	<section data-nav="menus" id="menus" class="hidden--mob section--menu spacing--vert-5 has--nav">
+		{% if food|length > 1 %}<div class="menu-buttons previous" id="backOne"><i class="icon-arrow-right" data-grunticon-embed></i></div>{% endif %}
 		<div class="block--menu-wrap">
 			<div class="gold-border">
 				<div class="icon-border-top"></div>
@@ -7,7 +10,7 @@
 				<div class="menu-background">
 					<div class="menu-border">
 						{% for food in food %}
-							{% if loop.first %}
+							<div>
 								<img src="{{food.menuimage|resize(400)}}" width="200" class="menu-title-image">
 								<div class="block--menu spacing--horiz-2">
 									{% for item in food.menu %}
@@ -15,7 +18,7 @@
 										<p class="font--thin">{{item.description}}</p>
 									{% endfor %}
 								</div>
-							{% endif %}
+							</div>
 						{% endfor %}
 					</div>
 				</div>
@@ -23,5 +26,7 @@
 				<i class="icon-divider margin--center hidden--mob" data-grunticon-embed></i><br>
 			</div>
 		</div>
+	{% if food|length > 1 %}<div class="menu-buttons next" id="forwardOne"><i class="icon-arrow-right" data-grunticon-embed></i></div>{% endif %}
 	</section>
+	
 {% endif %}

@@ -36,6 +36,11 @@
         }
 
         .block--menu-wrap {
+            position: relative;
+            z-index: 99;
+            width: 540px;
+            margin: 0 auto;
+
             .gold-border {
                 position: relative;
 
@@ -68,13 +73,14 @@
                         position: relative;
 
                         .menu-title-image {
-                            position: absolute;
-                            top: -90px;
+                            // position: absolute;
+                            // top: -90px;
                             margin: 0 auto;
                             display: block;
                             width: 200px;
-                            left: 50%;
-                            transform: translateX(-50%);
+
+                            // left: 50%;
+                            // transform: translateX(-50%);
 
                             + .block--menu {
                                 padding-top: 3em;
@@ -141,6 +147,49 @@
                 display: block;
                 margin-bottom: $mobile-spacing;
             }
+        }
+    }
+
+
+    .menu-border {
+        .slick-list {
+            // overflow-y: visible !important;
+            top: -60px;
+        }
+    }
+
+    .menu-buttons {
+        position: absolute;
+        z-index: 90;
+        top: 10em;
+        width: 140px;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        i {
+            svg {
+                path {
+                    fill: map-get($pink, main);
+                }
+            }
+        }
+
+        &.previous {
+            left: 25%;
+            transform: translateX(-100%);
+
+            i {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &.next {
+            right: 25%;
+            transform: translateX(100%);
         }
     }
 }
