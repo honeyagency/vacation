@@ -185,7 +185,7 @@
         list-style: none;
 
         li {
-            margin: 0em 0.4em;
+            margin:0 2px;
             display: inline;
 
             button {
@@ -199,7 +199,7 @@
                     height: 8px;
                     width: 8px;
                     border-radius: 14px;
-                    border: 1px solid map-get($green, main);
+                    border: 1px solid $gray;
                     background-color: transparent;
                     transition: background-color 0.2s $base-cubic;
                     display: inline-block;
@@ -208,7 +208,7 @@
                 &:hover {
                     &:before {
                         transition: background-color 0.2s $base-cubic;
-                        background-color: transparentize(map-get($green, main), 0.4);
+                        background-color: transparentize($gray, 0.4);
                     }
                 }
             }
@@ -217,7 +217,7 @@
                 button {
                     &:before {
                         transition: background-color 0.2s $base-cubic;
-                        background-color: map-get($green, main);
+                        background-color: $gray;
                     }
                 }
             }
