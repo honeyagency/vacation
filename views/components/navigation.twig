@@ -1,8 +1,8 @@
-<nav role="navigation" class="grid--sm-three-fourths grid--md-two-thirds grid--lg-half nog navigation">
-	<ul class="dsk--flex flex--wrap justify--between font--smaller">
+<nav role="navigation" class="grid--sm-three-fourths grid--md-three-fifths grid--lg-half grid--xl-two-fifths nog navigation">
+	<ul class="dsk--flex flex--wrap justify--between font--even-smaller">
 		{% for item in menu.get_items %}
 			<li class="nav-item {{item.classes | join(' ')}}">
-				<a class="nav-link font--bold color--green text--uppercase letter--2" href="{{item.get_link}}">{{item.title}}</a>
+				<a class="nav-link font--bold color--green text--uppercase letter--1" href="{{item.get_link}}">{{item.title}}</a>
 				{% if item.get_children %}
 					<ul class="nav nav-drop">
 						{% for child in item.get_children %}
