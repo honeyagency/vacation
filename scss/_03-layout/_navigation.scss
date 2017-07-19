@@ -74,11 +74,15 @@ nav.navigation {
         path {
             transition: transform 0.3s $base-cubic;
 
-            &#TopPath {
+            &[data-name="TopPath"] {
                 transform-origin: top left !important;
             }
 
-            &#BottomPath {
+            &[data-name="MidPath"] {
+                transition: opacity 0.2s $base-cubic;
+            }
+
+            &[data-name="BotPath"] {
                 transform-origin: bottom left !important;
             }
         }
@@ -101,14 +105,19 @@ body {
                     path {
                         transition: transform 0.2s $base-cubic;
 
-                        &#TopPath {
+                        &[data-name="TopPath"] {
                             transform-origin: top left !important;
-                            transform: translateX(4px) translateY(-3px) rotate(45deg);
+                            transform: translateX(4px) translateY(-2px) rotate(45deg);
                         }
 
-                        &#BottomPath {
+                        &[data-name="MidPath"] {
+                            opacity: 0;
+                            transition: opacity 0.2s $base-cubic;
+                        }
+
+                        &[data-name="BotPath"] {
                             transform-origin: bottom left !important;
-                            transform: translateX(4px) translateY(3px) rotate(-45deg);
+                            transform: translateX(4px) translateY(2px) rotate(-45deg);
                         }
                     }
                 }

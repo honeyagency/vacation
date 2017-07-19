@@ -1,11 +1,1 @@
-<svg version="1.1"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-	 x="0px" y="0px" width="32px" height="19px" viewBox="0 0 32 19" style="enable-background:new 0 0 32 19;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:none;stroke:#FFFFFF;stroke-width:3;}
-</style>
-<defs>
-</defs>
-<line id="BottomPath" class="st0" x1="0" y1="17.5" x2="32" y2="17.5"/>
-<line id="TopPath" class="st0" x1="0" y1="1.5" x2="32" y2="1.5"/>
-</svg>
+<svg id="917004c0-8522-4a2e-9e50-3cf1d46ca281" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 22"><title>nav</title><line id="71f9972a-d0ee-4642-8014-4f7d54f1e2c5" data-name="BotPath" y1="21" x2="34" y2="21" style="fill:none;stroke:#fff;stroke-width:2px"/><line id="33887875-e96b-425d-910f-f05377a229b9" data-name="MidPath" y1="11" x2="34" y2="11" style="fill:none;stroke:#fff;stroke-width:2px"/><line id="e26e1be4-b347-4e5a-80a6-184f6171a9e8" data-name="TopPath" y1="1" x2="34" y2="1" style="fill:none;stroke:#fff;stroke-width:2px"/></svg>
