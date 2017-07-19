@@ -5,8 +5,12 @@
 			<ul class="mobile--menu-navigation-track">
 				{% for food in food %}
 					<li class="block--mobile-menu-nav-item color--white text--center grid--half spacing--vert-1">
-						<img src="{{food.mobileimage|resize(200)}}" width="100">
-						<div>{{food.title}}</div>
+						{% if food.mobileimage %}
+							<img src="{{food.mobileimage|resize(200)}}" width="100">
+							<div>{{food.title}}</div>
+						{% else %}
+							<h2 class="font--sans">{{food.title}}</h2>
+						{% endif %}
 					</li>
 				{% endfor %}
 			</ul>
@@ -20,12 +24,12 @@
 			<div class="gold-border mobile--menu">
 				{% for food in food %}
 					<div class="block--menu  grid--one">
-					{# 	<h5 id="menu-{{loop.index}}" class="color--green-light">{{food.title}}<hr class="five shift color--green-light"></h5> #}
+						{# 	<h5 id="menu-{{loop.index}}" class="color--green-light">{{food.title}}<hr class="five shift color--green-light"></h5> #}
 						<div class="spacing--vert-2">
-						{% for item in food.menu %}
-							<h4>{{item.item}}</h4>
-							<p class="font--thin">{{item.description}}</p>
-						{% endfor %}
+							{% for item in food.menu %}
+								<h4>{{item.item}}</h4>
+								<p class="font--thin">{{item.description}}</p>
+							{% endfor %}
 						</div>
 					</div>
 				{% endfor %}
