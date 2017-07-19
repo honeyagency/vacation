@@ -1,0 +1,31 @@
+.button {
+    height: 28px;
+    top: -3em;
+    position: relative;
+    right: 3em;
+
+    span {
+        display: inline-block;
+        height: 35;
+        top: 50%;
+        position: relative;
+        margin-right: 15px;
+        transform: translateY(-50%);
+    }
+
+    .icon-arrow-right {
+        top: 50%;
+        position: relative;
+        transform: translateY(-50%);
+        display: inline-block;
+        height: 24px;
+
+        svg {
+            height: 100%;
+
+            path {
+                fill: map-get($pink, main);
+            }
+        }
+    }
+}

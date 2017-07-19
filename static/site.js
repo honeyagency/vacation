@@ -1,6 +1,13 @@
 jQuery(document).ready(function($) {
     $('#viewGallery').on('click touchstart', function(event) {
         event.preventDefault();
+        $text = $('#viewGallery > span');
+        console.log($text.text());
+        if ($text.text() == 'View More') {
+            $text.text('View Less');
+        } else {
+            $text.text('View More');
+        }
         $('.section--image-grid').toggleClass('viewingMore');
     });
     $('.takemeaway').on('click touchstart', function(event) {
