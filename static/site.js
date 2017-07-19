@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
     $('#viewGallery').on('click touchstart', function(event) {
         event.preventDefault();
         $text = $('#viewGallery > span');
-        console.log($text.text());
+
         if ($text.text() == 'View More') {
             $text.text('View Less');
         } else {
