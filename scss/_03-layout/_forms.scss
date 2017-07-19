@@ -125,24 +125,25 @@ textarea {
         box-shadow: 0;
         outline: none;
         transition: border-color .3s ease-in-out;
-        border-color: darken($gray, 30%);
+        border-color: map-get($pink, main);
+        color: map-get($pink, main);
 
         &::-webkit-input-placeholder {
-            color: map-get($green, main);
+            color: transparent;
         }
 
         &:-moz-placeholder {
             /* Firefox 18- */
-            color: map-get($green, main);
+            color: transparent;
         }
 
         &::-moz-placeholder {
             /* Firefox 19+ */
-            color: map-get($green, main);
+            color: transparent;
         }
 
         &:-ms-input-placeholder {
-            color: map-get($green, main);
+            color: transparent;
         }
     }
 }
