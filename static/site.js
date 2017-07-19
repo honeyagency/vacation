@@ -18,12 +18,12 @@ jQuery(document).ready(function($) {
     });
 });
 jQuery(document).ready(function($) {
-    $prev = $('#backOne');
-    $next = $('#forwardOne');
+    // $prev = $('#backOne');
+    // $next = $('#forwardOne');
     $('.menu-border').slick({
-        arrows: true,
+        arrows: false,
         cssEase: 'ease-in-out',
-        dots: false,
+        dots: true,
         fade: true,
         focusOnSelect: false,
         infinite: false,
@@ -33,7 +33,7 @@ jQuery(document).ready(function($) {
         speed: 200,
         swipe: true,
         adaptiveHeight: true,
-        prevArrow: $prev,
-        nextArrow: $next
+        // prevArrow: $prev,
+        // nextArrow: $next
     });
 });

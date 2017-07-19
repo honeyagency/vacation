@@ -38,7 +38,7 @@
         .block--menu-wrap {
             position: relative;
             z-index: 99;
-            width: 540px;
+            width: 720px;
             margin: 0 auto;
 
             .gold-border {
@@ -49,8 +49,8 @@
                     position: relative;
                     margin: 0 auto;
                     display: block;
-                    max-width: 540px;
-                    height: 156px;
+                    max-width: 720px;
+                    height: 164px;
                     text-align: center;
 
                     &.flip {
@@ -59,7 +59,7 @@
                 }
 
                 .menu-background {
-                    width: 540px;
+                    width: 720px;
                     padding: 0 18px 0 20px;
                     background: white;
                     position: relative;
@@ -88,10 +88,23 @@
                         }
 
                         .block--menu {
+                            font-size: 0.8em;
+                            column-count: 2;
+                            column-gap: 3em;
+                            line-height: 1.2;
                             text-align: center;
 
                             *:last-child {
                                 margin-bottom: 0 !important;
+                            }
+
+                            h4 {
+                                letter-spacing: 0.5px;
+
+                                + p {
+                                    margin-bottom: 2em;
+                                    line-height: 1.4;
+                                }
                             }
                         }
                     }
@@ -158,38 +171,92 @@
         }
     }
 
-    .menu-buttons {
+    .slick-dots {
+        width: 100%;
+        text-align: center;
         position: absolute;
-        z-index: 90;
-        top: 10em;
-        width: 140px;
+        top: -110px;
+        display: inline;
+        list-style: none;
 
-        &:hover {
-            cursor: pointer;
-        }
+        li {
+            margin: 0em 0.4em;
+            display: inline;
 
-        i {
-            svg {
-                path {
-                    fill: map-get($pink, main);
+            button {
+                appearance: none;
+                background: none;
+                border: 0;
+                font-size: 0;
+
+                &:before {
+                    content: ' ';
+                    height: 8px;
+                    width: 8px;
+                    border-radius: 14px;
+                    border: 1px solid map-get($green, main);
+                    background-color: transparent;
+                    transition: background-color 0.2s $base-cubic;
+                    display: inline-block;
+                }
+
+                &:hover {
+                    &:before {
+                        transition: background-color 0.2s $base-cubic;
+                        background-color: transparentize(map-get($green, main), 0.4);
+                    }
+                }
+            }
+
+            &.slick-active {
+                button {
+                    &:before {
+                        transition: background-color 0.2s $base-cubic;
+                        background-color: map-get($green, main);
+                    }
                 }
             }
         }
+    }
 
-        &.previous {
-            left: 25%;
-            transform: translateX(-100%);
+    // .menu-buttons {
+    //     position: absolute;
+    //     z-index: 90;
+    //     top: 10em;
+    //     width: 140px;
 
-            i {
-                svg {
-                    transform: rotate(180deg);
-                }
-            }
-        }
+    //     &:hover {
+    //         cursor: pointer;
+    //     }
 
-        &.next {
-            right: 25%;
-            transform: translateX(100%);
-        }
+    //     i {
+    //         svg {
+    //             path {
+    //                 fill: map-get($pink, main);
+    //             }
+    //         }
+    //     }
+
+    //     &.previous {
+    //         left: 25%;
+    //         transform: translateX(-100%);
+
+    //         i {
+    //             svg {
+    //                 transform: rotate(180deg);
+    //             }
+    //         }
+    //     }
+
+    //     &.next {
+    //         right: 25%;
+    //         transform: translateX(100%);
+    //     }
+    // }
+}
+
+* {
+    &:focus {
+        outline: none;
     }
 }
