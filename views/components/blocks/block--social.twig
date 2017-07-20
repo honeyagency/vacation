@@ -1,5 +1,5 @@
 <div class="block--social">
-<a href=""><i class="icon-social-fb" data-grunticon-embed></i></a>
-<a href=""><i class="icon-social-tw" data-grunticon-embed></i></a>
-<a href=""><i class="icon-social-in" data-grunticon-embed></i></a>
+{% if options.facebook %}<a href="{{options.facebook}}" target="_blank"><i class="icon-social-fb" data-grunticon-embed></i></a>{% endif %}
+{% if options.twitter %}<a href="{{options.twitter}}" target="_blank"><i class="icon-social-tw" data-grunticon-embed></i></a>{% endif %}
+{% if options.instagram %}<a href="{{options.instagram}}" target="_blank"><i class="icon-social-in" data-grunticon-embed></i></a>{% endif %}
 </div>
