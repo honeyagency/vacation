@@ -24,8 +24,11 @@
 						{% endfor %}
 					</div>
 				</div>
+
 				<div class="icon-border-top flip"></div>
+				{% if food.sample %}<div class="piece--sample-menu color--gray text--uppercase font--smaller">{{food.sample}}</div>{% endif %}
 				<i class="icon-divider margin--center hidden--mob" data-grunticon-embed></i><br>
+
 			</div>
 		</div>
 		{# {% if food|length > 1 %}<div class="menu-buttons next" id="forwardOne"><i class="icon-arrow-right" data-grunticon-embed></i></div>{% endif %} #}

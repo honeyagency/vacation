@@ -3,6 +3,25 @@
     "title": "Menus",
     "fields": [
         {
+            "key": "field_5970ff43ec657",
+            "label": "Sample Menu Text",
+            "name": "sample_menu",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_58e8184539609",
             "label": "Menu",
             "name": "menu",
@@ -205,5 +224,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1495046162
+    "modified": 1500577869
 }

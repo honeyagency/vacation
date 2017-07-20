@@ -102,6 +102,7 @@ function custom_menu_order($menu_ord)
         'separator1', // First separator
         'edit.php', // Posts
         'upload.php', // Media
+        'admin.php?page=flamingo',
         'acf-options-restaurant-info',
         'link-manager.php', // Links
         'edit.php?post_type=page', // Pages

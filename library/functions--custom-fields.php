@@ -126,6 +126,7 @@ function prepareRestaurantMenus()
                 }
                 $menus[] = array(
                     'title'       => get_sub_field('field_58e81852e57b8', 'options'),
+
                     'mobileimage' => $mobileImage,
                     'menuimage'   => $menuImage,
                     'description' => get_sub_field('field_58e81857e57b9', 'options'),
@@ -135,5 +136,6 @@ function prepareRestaurantMenus()
             }
         }
     }
+    $menus['sample'] = get_field('field_5970ff43ec657', 'options');
     return $menus;
 }

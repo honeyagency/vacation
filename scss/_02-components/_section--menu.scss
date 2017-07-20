@@ -260,6 +260,15 @@
     // }
 }
 
+.piece--sample-menu {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 5em;
+    z-index: 9;
+}
+
 * {
     &:focus {
         outline: none;
