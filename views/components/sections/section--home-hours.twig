@@ -2,9 +2,10 @@
 	<i class="icon-deco top left" data-grunticon-embed></i>
 	<i class="icon-deco top right" data-grunticon-embed></i>
 	<div class="vertical--center-dsk text--center spacing--vert-2 spacing--dsk-vert-0">
-		{% if options.prettyhours %}
-			<div>
-				<h3 class="font--sans margin--vert-1">Open</h3>
+		
+		<div>
+			<h3 class="font--sans margin--vert-1">{{home.title}}</h3>
+			{% if options.prettyhours %}
 				{% for hours in options.prettyhours %}
 					<div class="font--largest letter--1">
 						<span>{{hours.days}}</span>
@@ -14,7 +15,7 @@
 			{% endif %}
 		</div>
 		<i class="icon-divider block margin--center margin--vert-2" data-grunticon-embed></i>
-	
+		
 		<div class="font--largest letter--1">
 			<span>{{options.address.street}}</span><br>
 			<span>{{options.address.city}}</span><br>

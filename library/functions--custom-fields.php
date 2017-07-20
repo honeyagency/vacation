@@ -35,6 +35,7 @@ function prepareHomePageFields()
     );
     $section = array(
         'email'       => $email,
+        'title'       => get_field('field_597123546802e'),
         'hours'       => $hours,
         'description' => get_field('field_59137a9985eb2'),
         'food'        => $menus,

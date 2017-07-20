@@ -57,8 +57,8 @@
             "append": ""
         },
         {
-            "key": "field_58f10c22ccfb5",
-            "label": "Hours",
+            "key": "field_5971235f6802f",
+            "label": "Title",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -73,11 +73,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_58f10c28ccfb6",
-            "label": "Hours",
-            "name": "hours",
-            "type": "repeater",
-            "instructions": "",
+            "key": "field_597123546802e",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "This displays above the hours",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -85,51 +85,11 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
-            "sub_fields": [
-                {
-                    "key": "field_58f10c48ccfb7",
-                    "label": "Days",
-                    "name": "days",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_58f10c54ccfb8",
-                    "label": "Hours",
-                    "name": "hours",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                }
-            ]
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_59137a7c85eb1",
@@ -279,5 +239,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1494620644
+    "modified": 1500586866
 }
