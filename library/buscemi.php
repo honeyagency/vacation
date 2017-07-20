@@ -118,14 +118,27 @@ function custom_menu_order($menu_ord)
 add_filter('custom_menu_order', 'custom_menu_order'); // Activate custom_menu_order
 add_filter('menu_order', 'custom_menu_order');
 
-add_action('admin_init', 'my_remove_menu_pages');
-function my_remove_menu_pages()
-{
-
-    global $user_ID;
-
-    if (current_user_can('administrator') != true) {
-        remove_menu_page('edit-comments.php');
-        remove_menu_page('tools.php');
-    }
+function remove_admin_bar_links() {
+    global $wp_admin_bar, $current_user;
+    
+    // if ($current_user->ID != 1) {
+        $wp_admin_bar->remove_menu('wp-admin-bar-wpseo-menu');          // Remove the updates link
+        $wp_admin_bar->remove_menu('comments');         // Remove the comments link
+        // $wp_admin_bar->remove_menu('new-content');      // Remove the content link
+        // $wp_admin_bar->remove_menu('w3tc');             // If you use w3 total cache remove the performance link
+        // $wp_admin_bar->remove_menu('my-account');       // Remove the user details tab
+    // }
 }
+add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
+
+// add_action('admin_init', 'my_remove_menu_pages');
+// function my_remove_menu_pages()
+// {
+
+//     global $user_ID;
+
+//     if (current_user_can('administrator') != true) {
+//         remove_menu_page('edit-comments.php');
+//         remove_menu_page('tools.php');
+//     }
+// }
