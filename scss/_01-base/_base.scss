@@ -1,0 +1,26 @@
+.error404 {
+    header {
+        @include media($max-sm) {
+            background-color: map-get($green, light);
+        }
+    }
+}
+
+.icon-skel-guy {
+    margin: 2em auto;
+    display: block;
+    height: 25vh;
+
+    @include media($screen-sm) {
+        height: 45vh;
+    }
+
+
+    svg {
+        height: 100%;
+
+        path {
+            fill: white;
+        }
+    }
+}
