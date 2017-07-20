@@ -45,7 +45,7 @@ jQuery(document).ready(function($) {
     });
 });
 // Scroll so nice you'll click() it twice
-jQuery(function() {
+jQuery(document).ready(function() {
   jQuery('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = jQuery(this.hash);
