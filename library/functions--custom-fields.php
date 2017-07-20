@@ -82,6 +82,9 @@ function prepareOptionsPage()
     $section = array(
         'image'        => $image,
         'address'      => $address,
+        'facebook'     => get_field('field_5970ddd0b1238', 'options'),
+        'twitter'      => get_field('field_5970dde1b1239', 'options'),
+        'instagram'    => get_field('field_5970dde8b123a', 'options'),
         'phone_number' => get_field('field_58e80f2fae445', 'options'),
         'email'        => get_field('field_592761fdd75b1', 'options'),
         'pricerange'   => get_field('field_58ed166416862', 'options'),
