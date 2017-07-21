@@ -2,7 +2,6 @@ jQuery(document).ready(function($) {
     $('#viewGallery').on('click touchstart', function(event) {
         event.preventDefault();
         $text = $('#viewGallery > span');
-
         if ($text.text() == 'View More') {
             $text.text('View Less');
         } else {
@@ -46,16 +45,19 @@ jQuery(document).ready(function($) {
 });
 // Scroll so nice you'll click() it twice
 jQuery(document).ready(function() {
-  jQuery('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = jQuery(this.hash);
-      target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        jQuery('html, body').animate({
-          scrollTop: target.offset().top
-        },300, "swing");
-        return false;
-      }
-    }
-  });
+    jQuery('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = jQuery(this.hash);
+            target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                if ($('body').hasClass('open')) {
+                    $('body').removeClass('open');
+                }
+                jQuery('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 300, "swing");
+                return false;
+            }
+        }
+    });
 });

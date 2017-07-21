@@ -10,13 +10,17 @@
 		{% include 'components/sections/section--home-description.twig' %}
 	</section>
 	{# {% include 'components/sections/section--video.twig' %} #}
+	<div data-nav="foodmenus" name="foodmenus" id="foodmenus">
 	{% include 'components/sections/section--mobile-menu-nav.twig' %}
 	{% include 'components/sections/section--menu.twig' %}
+</div>
 	<section class="bg--texture">
 		{% if home.about.title %}
 			{% include 'components/sections/section--home-about.twig' %}
 		{% endif %}
+		<div name="image-gallery" data-nav="image-gallery" id="image-gallery">
 		{% include 'components/sections/section--image-grid.twig' %}
 		{% include 'components/sections/section--mobile-slider.twig' %}
+	</div>
 	</section>
 {% endblock %}
