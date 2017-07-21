@@ -32,8 +32,11 @@
 							{% endfor %}
 						</div>
 					</div>
+
 				{% endfor %}
+
 			</div>
 		</div>
+		{% if food.sample %}<div class="text--center color--gray text--uppercase font--smaller spacing--vert-1 hidden--dsk">{{food.sample}}</div>{% endif %}
 	</section>
 {% endif %}

@@ -7,23 +7,20 @@
 <body class="{{body_class}}" data-template="base.twig">
 {% include 'components/header.twig' %}
 <main role="main" class="content-wrapper">
-{% if title %}<h1>{{title}}</h1>{% endif %}
-{% block content %}
-	Sorry, no content
-{% endblock %}
+	{% if title %}<h1>{{title}}</h1>{% endif %}
+	{% block content %}
+		Sorry, no content
+	{% endblock %}
 </main>
 {% block footer %}
-
-		{% include 'footer.twig' %}
-
+	{% include 'footer.twig' %}
 	{{ function('wp_footer') }}
 {% endblock %}
 </body>
 <script>var myLazyLoad = new LazyLoad({
-    // example of options object -> see options section
-    threshold: 500,
-    throttle: 30,
-    show_while_loading: false,
+// example of options object -> see options section
+threshold: 500,
+throttle: 30,
+show_while_loading: false,
 });</script>
-
 </html>
