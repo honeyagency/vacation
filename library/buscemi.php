@@ -41,7 +41,7 @@ function jquery_enqueue()
 
 function localInstall()
 {
-    if ('https://vacationdtsa.com' == site_url) {
+    if ('https://vacationdtsa.com' == site_url()) {
         $res = false;
     } else {
 
