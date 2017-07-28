@@ -41,7 +41,7 @@ function jquery_enqueue()
 
 function localInstall()
 {
-    if ('127.0.0.1' == $_SERVER["REMOTE_ADDR"]) {
+    if ('https://vacationdtsa.com' == site_url) {
         $res = false;
     } else {
 
