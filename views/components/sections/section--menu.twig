@@ -1,29 +1,25 @@
 {% if food %}
 	<section class="hidden--mob section--menu spacing--vert-5 has--nav">
-		{# {% if food|length > 1 %}<div class="menu-buttons previous" id="backOne"><i class="icon-arrow-right" data-grunticon-embed></i></div>{% endif %} #}
 		<div class="block--menu-wrap">
 			<div class="gold-border">
 				<div class="icon-border-top"></div>
-				
 				<div class="menu-background">
 					<div class="menu-border">
-						{% for food in food %}
-							{% if food == sample %}
-							{% else %}
-								<div>
-									{% if food.menuimage %}
-										<img src="{{food.menuimage|resize(400)}}" width="200" class="menu-title-image">
-									{% else %}
-										<h3 class="menu--title text--center font--sans">{{food.title}}</h3>
-									{% endif %}
-									<div class="block--menu spacing--horiz-3">
-										{% for item in food.menu %}
-											<h4>{{item.item}}</h4>
-											<p class="font--thin">{{item.description}}</p>
-										{% endfor %}
-									</div>
+						{% for food in food.menus %}
+							<div>
+								{% if food.menuimage %}
+									<img src="{{food.menuimage|resize(400)}}" width="200" class="menu-title-image">
+								{% else %}
+									<h3 class="menu--title text--center font--sans">{{food.title}}</h3>
+								{% endif %}
+								<div class="block--menu spacing--horiz-3">
+									{% for item in food.menu %}
+										<h4>{{item.item}}</h4>
+										<p class="font--thin">{{item.description}}</p>
+									{% endfor %}
 								</div>
-							{% endif %}
+							</div>
+						{% else %}
 						{% endfor %}
 					</div>
 				</div>
@@ -32,7 +28,5 @@
 				<i class="icon-divider margin--center hidden--mob" data-grunticon-embed></i><br>
 			</div>
 		</div>
-		{# {% if food|length > 1 %}<div class="menu-buttons next" id="forwardOne"><i class="icon-arrow-right" data-grunticon-embed></i></div>{% endif %} #}
 	</section>
-	
 {% endif %}

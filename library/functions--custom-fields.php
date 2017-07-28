@@ -137,6 +137,9 @@ function prepareRestaurantMenus()
             }
         }
     }
-    $menus['sample'] = get_field('field_5970ff43ec657', 'options');
+    $menus = array(
+        'menus'   => $menus,
+        'sample' => get_field('field_5970ff43ec657', 'options'),
+    );
     return $menus;
 }
