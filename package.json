@@ -28,11 +28,11 @@
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-cssnano": "*",
-    "grunt-grunticon": "^2.3.0",
+    "grunt-grunticon": "*",
     "grunt-notify": "*",
-    "grunt-postcss": "^0.8.0",
+    "grunt-postcss": "*",
     "grunt-svgmin": "*",
-    "postcss-convert-values": "^2.3.4",
-    "postcss-font-magician": "^1.4.0"
+    "postcss-convert-values": "*",
+    "postcss-font-magician": "^2.0.0"
   }
 }

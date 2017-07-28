@@ -4,8 +4,8 @@
 		{% for image in home.gallery %}
 			{% if loop.index < 5 %}
 				<img
-				src="{{image|resize(1280,832)}}"
-				srcset="
+				data-original="{{image|resize(1280,832)}}"
+				data-original-set="
 				{{image|resize(640,416)}} 320w,
 				{{image|resize(750,487)}} 375w,
 				{{image|resize(944,613)}} 472w,
