@@ -3,7 +3,22 @@
 		{% for image in home.gallery %}
 			{% if loop.index <= 4 %}
 				<div id="element-{{loop.index}}">
-					<img src="{{image}}" data-action="zoom">
+					<img
+					data-original="{{image|resize(472)}}"
+					data-action="zoom"
+					alt=""
+					data-original-set="
+					{{image|resize(214)}} 213w,
+					{{image|resize(250)}} 250w,
+					{{image|resize(276)}} 276w,
+					{{image|resize(472)}} 472w,
+					{{image|resize(455)}} 455w,
+					{{image|resize(480)}} 480w,
+					{{image|resize(640)}} 640w,
+					{{image|resize(720)}} 720w,
+					{{image|resize(960)}} 960w,
+					{{image|resize(1280)}} 1280w"
+					sizes="33vw">
 				</div>
 			{% endif %}
 		{% endfor %}
@@ -12,7 +27,26 @@
 		{% for image in home.gallery %}
 			{% if loop.index > 4 %}
 				<div id="element-{{loop.index + 4 }}">
-					<img src="{{image}}" data-action="zoom">
+					<img
+					data-action="zoom"
+					alt=""
+					data-original="{{image|resize(320)}}"
+					data-original-set="
+					{{image|resize(160)}}  160w,
+					{{image|resize(188)}}  188w,
+					{{image|resize(270)}} 270w,
+					{{image|resize(320)}} 320w,
+					{{image|resize(342)}} 342w,
+					{{image|resize(360)}} 360w,
+					{{image|resize(480)}} 480w,
+					{{image|resize(640)}} 640w,
+					{{image|resize(750)}}  750w,
+					{{image|resize(1080)}} 1080w,
+					{{image|resize(1280)}} 1280w,
+					{{image|resize(1366)}} 1366w,
+					{{image|resize(1440)}} 1440w,
+					{{image|resize(1920)}} 1920w"
+					sizes="22vw">
 				</div>
 			{% endif %}
 		{% endfor %}

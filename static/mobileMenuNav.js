@@ -38,6 +38,7 @@ jQuery(document).ready(function($) {
                 nextArrow: $next
             });
             $('.mobile--slider').slick({
+                lazyLoad: "ondemand",
                 arrows: false,
                 dots: true,
                 focusOnSelect: false,

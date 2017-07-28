@@ -25,7 +25,8 @@ $inactive-background: transparentize(white, 0.4);
                     border-radius: 2px;
                     background: linear-gradient(to right, $active-background 0%, $active-background 50%, $inactive-background 50%, $inactive-background 100%);
                     background-size: 200%;
-					background-position-x: 100%;
+                    background-position-x: 100%;
+
                     // background-image: linear-gradient(to right, $inactive-background 0%, $inactive-background 100%);
                
                 }
@@ -46,6 +47,11 @@ $inactive-background: transparentize(white, 0.4);
                 }
             }
         }
+    }
+
+    img {
+        width: 100vw;
+        min-height: 65vw;
     }
 }
 

@@ -1,20 +1,25 @@
 <section class="section--image-grid hidden--dsk has--nav">
 	<h2 class="text--center font--sans spacing--vert-1">Gallery</h2>
-		<div class="mobile--slider section--mobile-gallery">
+	<div class="mobile--slider section--mobile-gallery">
 		{% for image in home.gallery %}
 			{% if loop.index < 5 %}
-			<img 
+				<img
 				src="{{image|resize(1280,832)}}"
-				src-set="
-				{{image|resize(640,416)}}  640w,
-				{{image|resize(750,488)}}  750w,
+				srcset="
+				{{image|resize(640,416)}} 320w,
+				{{image|resize(750,487)}} 375w,
+				{{image|resize(944,613)}} 472w,
+				{{image|resize(910,591)}} 455w,
+				{{image|resize(960,624)}} 480w,
+				{{image|resize(1280,832)}} 640w,
+				{{image|resize(1500,976)}} 750w,
+				{{image|resize(768,500)}} 768w,
 				{{image|resize(1080,702)}} 1080w,
-				{{image|resize(1280,832)}} 1280w,
+				{{image|resize(1242,832)}} 1280w,
 				{{image|resize(1366,888)}} 1366w,
 				{{image|resize(1440,749)}} 1440w,
 				{{image|resize(1920,1248)}} 1920w"
 				sizes="100vw">
-
 			{% endif %}
 		{% endfor %}
 	</div>

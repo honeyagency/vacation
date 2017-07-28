@@ -39,6 +39,7 @@ jQuery(document).ready(function($) {
         speed: 200,
         swipe: true,
         adaptiveHeight: true,
+        
         // prevArrow: $prev,
         // nextArrow: $next
     });
